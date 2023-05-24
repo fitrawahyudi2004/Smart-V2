@@ -23,7 +23,7 @@ Angin: ${json.wind.speed} km/jam
 }
 
 handler.help = ['cuaca']
-handler.tags = ['internet']
+handler.tags = ['info']
 handler.command = /^(cuaca|weather)$/i
 
 module.exports = handler

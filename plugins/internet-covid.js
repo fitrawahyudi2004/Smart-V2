@@ -14,7 +14,7 @@ Update Info : ${json.lastUpdate}
   else throw json
 }
 handler.help = ['covid'].map(v => v + ' <negara>')
-handler.tags = ['internet']
+handler.tags = ['info']
 handler.command = /^(corona|covid|covid19)$/i
 //susu, tetek, oppai
 module.exports = handler

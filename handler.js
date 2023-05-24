@@ -246,7 +246,7 @@ module.exports = {
                     if (!isNumber(user.level)) user.level = 0
                     if (!user.job) user.job = 'Pengangguran'
                     if (!user.lbars) user.lbars = '[▒▒▒▒▒▒▒▒▒]'
-                    if (!user.premium) user.premium = false
+                    if (!user.premium) user.premium = true
                     if (!user.premium) user.premiumTime= 0
                     if (!user.role) user.role = 'Newbie ㋡'
                     if (!('autolevelup' in user)) user.autolevelup = true
@@ -264,7 +264,7 @@ module.exports = {
                     exp: 0,
                     coin: 0,
                     atm: 0,
-                    limit: 500,
+                    limit: 100,
                     tigame: 999,
                     lastclaim: 0,
                     money: 0,
@@ -644,7 +644,7 @@ module.exports = {
                                 console.error(e)
                             }
                         }
-                        if (m.limit) m.reply(+ m.limit + ' Limit terpakai')
+                        if (m.limit) m.reply(+ m.limit + ' Limit anda telah terpakai')
                    }
                     break
                 }
@@ -780,7 +780,7 @@ global.dfail = (type, m, conn) => {
         private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
         admin: 'Perintah ini hanya untuk *Admin* grup!',
         botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*.daftar* \n\nContoh: *.daftar*',
+        unreg: 'Hallo Kak,\n\nSilahkan daftar terlebih dahulu untuk menggunakan fitur yang ada di bot ini dengan cara mengetik:\n\n*.daftar* \n\nContoh: *.daftar*',
         restrict: 'Fitur ini di *disable*!'
     }[type]
     if (msg) return m.reply(msg)

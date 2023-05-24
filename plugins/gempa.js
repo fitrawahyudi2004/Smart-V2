@@ -24,7 +24,7 @@ var handler = async (m, {
 	}
 };
 handler.command = handler.help = ['infogempa', 'gempa'];
-handler.tags = ['information'];
+handler.tags = ['info'];
 handler.premium = true;
 handler.limit = true;
 module.exports = handler ;

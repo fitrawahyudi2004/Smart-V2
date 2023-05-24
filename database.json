@@ -10,10 +10,10 @@
       "level": 0,
       "pasangan": "",
       "pc": 0,
-      "exp": 9,
+      "exp": 1,
       "coin": 0,
       "atm": 0,
-      "limit": 500,
+      "limit": 100,
       "tigame": 999,
       "lastclaim": 0,
       "money": 0,
@@ -142,10 +142,10 @@
       "stroberi": 0,
       "semangka": 0,
       "jeruk": 0,
-      "name": "+62 821-8025-5595",
+      "name": "zero",
       "age": -1,
       "regTime": -1,
-      "premium": false,
+      "premium": true,
       "premiumTime": 0,
       "job": "Pengangguran",
       "lbars": "[▒▒▒▒▒▒▒▒▒]",
@@ -203,10 +203,10 @@
       "level": 0,
       "pasangan": "",
       "pc": 0,
-      "exp": 928,
+      "exp": 792,
       "coin": 0,
       "atm": 0,
-      "limit": 500,
+      "limit": 100,
       "tigame": 999,
       "lastclaim": 0,
       "money": 0,
@@ -338,7 +338,7 @@
       "name": "+62 812-6216-6032",
       "age": -1,
       "regTime": -1,
-      "premium": false,
+      "premium": true,
       "premiumTime": 0,
       "job": "Pengangguran",
       "lbars": "[▒▒▒▒▒▒▒▒▒]",
@@ -401,7 +401,7 @@
       "viewonce": false,
       "antiToxic": true
     },
-    "6282180255595@s.whatsapp.net": {
+    "6281262166032@s.whatsapp.net": {
       "isBanned": false,
       "welcome": true,
       "detect": false,
@@ -414,7 +414,7 @@
       "viewonce": false,
       "antiToxic": true
     },
-    "6281262166032@s.whatsapp.net": {
+    "120363113189779755@g.us": {
       "isBanned": false,
       "welcome": true,
       "detect": false,
@@ -430,154 +430,76 @@
   },
   "stats": {
     "menu.js": {
-      "total": 15,
-      "success": 15,
-      "last": 1684512028470,
-      "lastSuccess": 1684512028470
+      "total": 37,
+      "success": 36,
+      "last": 1684949077888,
+      "lastSuccess": 1684949077888
     },
     "xp-regist.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684508786606,
-      "lastSuccess": 1684508786606
-    },
-    "downloader-play.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684508903724,
-      "lastSuccess": 1684508903724
-    },
-    "sticker-sticker.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684509043510,
-      "lastSuccess": 1684509043510
-    },
-    "openai-ai.js": {
-      "total": 8,
-      "success": 2,
-      "last": 1684509459355,
-      "lastSuccess": 1684509459355
-    },
-    "openai-aiimg.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684509538117,
-      "lastSuccess": 1684509538117
-    },
-    "stalker-igstalk.js": {
-      "total": 4,
-      "success": 1,
-      "last": 1684509762644,
-      "lastSuccess": 1684509762644
-    },
-    "sticker-attp.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684509788190,
-      "lastSuccess": 1684509788190
-    },
-    "info-creator.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684509810723,
-      "lastSuccess": 1684509810723
-    },
-    "image-shaun_the_sheep.js": {
-      "total": 2,
-      "success": 0,
-      "last": 1684509883169,
-      "lastSuccess": 0
-    },
-    "game-math.js": {
-      "total": 5,
-      "success": 2,
-      "last": 1684510030239,
-      "lastSuccess": 1684510030239
-    },
-    "_ppcp.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684510102082,
-      "lastSuccess": 1684510102082
-    },
-    "disk.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684510237029,
-      "lastSuccess": 1684510237029
-    },
-    "database.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684510253319,
-      "lastSuccess": 1684510253319
-    },
-    "cecan.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684510282587,
-      "lastSuccess": 1684510282587
-    },
-    "downloader-tiktok.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684510360368,
-      "lastSuccess": 1684510360368
-    },
-    "game-dare.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684510398110,
-      "lastSuccess": 1684510398110
-    },
-    "maker-qc.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684510428074,
-      "lastSuccess": 1684510428074
-    },
-    "main-gcbot.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684510752050,
-      "lastSuccess": 1684510752050
-    },
-    "main-donasi.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684510771625,
-      "lastSuccess": 1684510771625
-    },
-    "info-runtime.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684510808241,
-      "lastSuccess": 1684510808241
-    },
-    "jarak.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684511504209,
-      "lastSuccess": 1684511504209
-    },
-    "fun-plusplus.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684511533718,
-      "lastSuccess": 1684511533718
+      "total": 3,
+      "success": 3,
+      "last": 1684944748494,
+      "lastSuccess": 1684944748494
     },
     "_antililink_del.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1684511726344,
-      "lastSuccess": 1684511726344
+      "total": 3,
+      "success": 3,
+      "last": 1684944765540,
+      "lastSuccess": 1684944765540
     },
-    "info-speedtest.js": {
+    "alquran.js": {
+      "total": 3,
+      "success": 0,
+      "last": 1684945026403,
+      "lastSuccess": 0
+    },
+    "coinflip.js": {
+      "total": 2,
+      "success": 0,
+      "last": 1684945080655,
+      "lastSuccess": 0
+    },
+    "rules.js": {
+      "total": 2,
+      "success": 0,
+      "last": 1684945794009,
+      "lastSuccess": 0
+    },
+    "openai-ai.js": {
       "total": 2,
       "success": 2,
-      "last": 1684512020540,
-      "lastSuccess": 1684512020540
+      "last": 1684947989862,
+      "lastSuccess": 1684947989862
+    },
+    "owner-addprem.js": {
+      "total": 6,
+      "success": 1,
+      "last": 1684948943207,
+      "lastSuccess": 1684948943207
+    },
+    "main-delete.js": {
+      "total": 2,
+      "success": 0,
+      "last": 1684948989817,
+      "lastSuccess": 0
+    },
+    "kick.js": {
+      "total": 3,
+      "success": 1,
+      "last": 1684949013977,
+      "lastSuccess": 1684949013977
+    },
+    "owner-delprem.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1684949039517,
+      "lastSuccess": 1684949039517
+    },
+    "maker-textpro.js": {
+      "total": 5,
+      "success": 1,
+      "last": 1684949283035,
+      "lastSuccess": 1684949283035
     }
   },
   "msgs": {},

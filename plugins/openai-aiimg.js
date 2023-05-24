@@ -5,10 +5,10 @@ let handler = async (m, { text, command, conn }) => {
 
   let response = await fetch(`https://botcahx.cyclic.app/dalle?text=${encodeURIComponent(text)}`)
   let image = await response.buffer()
-  conn.sendFile(m.chat, image, 'aneh.jpg',  wm, m)
+  conn.sendFile(m.chat, image, 'aiimg.jpg',  wm, m)
 
 }
 handler.command = handler.help = ['aiimg','aiimage','ai-image']
-handler.tags = ['internet']
+handler.tags = ['ai']
 
 module.exports = handler

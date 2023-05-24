@@ -12,7 +12,7 @@ contextInfo: {
 externalAdReply: {
 title: "",
 body: uptimex,
-thumbnailUrl: "https://telegra.ph/file/dc5a67d724b016574129b.jpg",
+thumbnailUrl: "https://i.postimg.cc/hGRXnJqw/sa.png",
 sourceUrl: "",
 mediaType: 1,
 renderLargerThumbnail: true
