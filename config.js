@@ -7,12 +7,14 @@
 // - Contoh global.btc = 'xzRhejka'
 // global.lann = 'trial'
 // - Jika sudah maka lanjutkan untuk mengubah nomor owner dan wm.
+//let wibh = moment.tz('Asia/Jakarta').format('HH')
+
 
 global.owner = ['6281262166032']  
 global.mods = ['6281262166032'] 
 global.prems = ['6281262166032']
 global.nameowner = 'Fitra Wahyudi'
-global.numberowner = '6281262166032' 
+global.nomorown = '6281262166032' 
 global.mail = 'fitrawahyudi739@gmail.com' 
 global.dana = '6281262166032'
 global.pulsa = '6281262166032'
@@ -22,6 +24,7 @@ global.gc = 'https://chat.whatsapp.com/Hvkzf6lLjLRHjtd67G1gfL'
 global.web = 'https://github.com/fitrawahyudi2004'
 global.instagram = 'https://instagram.com/fitra_wahyudi_'
 global.wm = '© FWD'
+global.versi = '7.1.1'
 global.watermark = wm
 global.wm2 = '⫹⫺ FWD'
 global.wm3 = '© FWD'
@@ -30,12 +33,39 @@ global.wait = '_*Tunggu sedang di proses...*_'
 global.eror = '_*Server Error*_'
 global.benar = 'Benar ✅\n'
 global.salah = 'Salah ❌\n'
+global.lahir = '20 November 2004'
 global.stiker_wait = '*⫹⫺ Stiker sedang dibuat...*'
 global.packname = 'Made with'
 global.author = 'Bot WhatsApp'
 global.alpiskey = '8ecfc216' //daftar sendiri jika key habis https://alpis.eu.org
 
-global.btc = '55higgQO' //Daftar terlebih dahulu https://api.botcahx.live
+/*=========== HIASAN ===========*/
+// DEFAULT MENU
+global.dmenut = '❏═┅═━–〈' //top
+global.dmenub = '┊•' //body
+global.dmenub2 = '┊' //body for info cmd on Default menu
+global.dmenuf = '┗––––––––––✦' //footer
+
+// COMMAND MENU
+global.dashmenu = '┅━━━━━═┅═❏ *SMART BOT* ❏═┅═━━━━━┅'
+global.cmenut = '❏––––––『'                       //top
+global.cmenuh = '』––––––'                        //header
+global.cmenub = '┊✦ '                            //body
+global.cmenuf = '┗━═┅═━––––––๑\n'                //footer
+global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     ' //after
+global.pmenus = '┊'                              //pembatas menu selector
+global.thumb = 'https://i.postimg.cc/4NqQNHBk/3.jpg'
+global.fsizedoc = '99999999999999'
+global.fpagedoc = '999'
+global.dpdf = 'application/pdf'
+global.htki = '––––––『' // Hiasan Titile (KIRI)
+global.htka = '』––––––' // Hiasan Title  (KANAN)
+global.lopr = 'Ⓟ' //LOGO PREMIUM ON MENU.JS
+global.lolm = 'Ⓛ' //LOGO FREE ON MENU.JS
+global.htjava = '⫹⫺'    //hiasan Doang :v
+global.hsquere = ['⛶','❏','⫹⫺']
+
+global.btc = 'fitra_wahyudi_' //Daftar terlebih dahulu https://api.botcahx.live
 global.lann = 'trial' //Note Key Ini Hanya Bertahan Selama 4 Day Sejak Config.js update! lebih baik register di https://api.lannn.me
 global.APIs = { 
   tio: 'https://api.botcahx.live',

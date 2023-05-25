@@ -246,7 +246,7 @@ module.exports = {
                     if (!isNumber(user.level)) user.level = 0
                     if (!user.job) user.job = 'Pengangguran'
                     if (!user.lbars) user.lbars = '[▒▒▒▒▒▒▒▒▒]'
-                    if (!user.premium) user.premium = true
+                    if (!user.premium) user.premium = false
                     if (!user.premium) user.premiumTime= 0
                     if (!user.role) user.role = 'Newbie ㋡'
                     if (!('autolevelup' in user)) user.autolevelup = true
@@ -780,7 +780,7 @@ global.dfail = (type, m, conn) => {
         private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
         admin: 'Perintah ini hanya untuk *Admin* grup!',
         botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Hallo Kak,\n\nSilahkan daftar terlebih dahulu untuk menggunakan fitur yang ada di bot ini dengan cara mengetik:\n\n*.daftar* \n\nContoh: *.daftar*',
+        unreg: 'Hallo Kak,\n\nSepertinya Nomor Kakak tidak terdaftar di Database SMART BOT\nSilahkan daftar terlebih dahulu untuk menggunakan fitur yang ada di bot ini dengan cara mengetik:\n\n*.daftar* \n\nContoh: *.daftar*\n\nApabila kakak tidak mengerti cara mendaftarnya bisa klik link di bawah untuk melihat cara pendaftaran dan penggunaan Bot WhatsApp\nhttps://bit.ly/tutorialbotwa\nTerima Kasih..\n\nPowered By FWD',
         restrict: 'Fitur ini di *disable*!'
     }[type]
     if (msg) return m.reply(msg)

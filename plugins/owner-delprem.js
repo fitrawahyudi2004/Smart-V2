@@ -1,23 +1,18 @@
-let handler = async (m, { conn, text }) => {
-
+let handler = async (m, { usedPrefix, command, text }) => {
     let who
-    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text
-    else who = m.chat
-    if (!who) throw `tag orangnya!`
-    if (!global.prems.includes(who.split`@`[0])) throw 'dia ngga premium!'
-    let index = global.prems.findIndex(v => (v.replace(/[^0-9]/g, '') + '@s.whatsapp.net') === (who.replace(/[^0-9]/g, '') + '@s.whatsapp.net'))
-    global.prems.splice(index, 1)
-    conn.reply(m.chat, `@${who.split('@')[0]} sekarang bukan premium!`, m, {
-        contextInfo: {
-            mentionedJid: [who]
-        }
-    })
-
+    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false
+    else who = text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : m.chat
+    let user = db.data.users[who]
+    if (!who) return m.reply(`tag atau balas orangnya mas!\n\ncontoh:\n${usedPrefix + command} @${m.sender.split`@`[0]}`)
+    user.premium = false
+    user.premiumTime = 0
+    m.reply(`berhasil!\n*${user.name}* sekarang bukan premium!`)
 }
-handler.help = ['delprem [@user]']
+handler.help = ['hapusprem [@user]']
 handler.tags = ['owner']
-handler.command = /^(remove|hapus|-|del)prem$/i
+handler.command = /^(-|hapus)p(rem)?$/i
 
-handler.owner = true
+handler.rowner = true
+handler.group = true
 
 module.exports = handler

@@ -20,9 +20,9 @@ renderLargerThumbnail: true
 }
 handler.help = ['mode']
 handler.tags = ['main']
-handler.customPrefix = /^(mode)$/i 
-handler.command = new RegExp
-handler.limit = false
+handler.owner = true
+
+handler.command = /^(mode)$/i
 
 module.exports = handler
 

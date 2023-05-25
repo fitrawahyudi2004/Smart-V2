@@ -1,4 +1,8 @@
 let handler = async (m, { teks, conn, isOwner, isAdmin, args }) => {
+  let who
+  if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
+  else who = m.chat
+  let user = db.data.users[who]
 	if (!(isAdmin || isOwner)) {
                 global.dfail('admin', m, conn)
                 throw false
@@ -17,6 +21,7 @@ if (nenen) m.reply(`sukses demote @${user.split('@')[0]}!`)
   for (let user of users)
     if (user.endsWith("@s.whatsapp.net"))
       await conn.groupParticipantsUpdate(m.chat, [user], "demote");
+      m.reply(`${user.name} sekarang bukan lagi Admin Group`)
 };
 
 handler.help = ['demote @user']

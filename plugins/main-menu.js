@@ -5,36 +5,38 @@ let path = require('path')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 let levelling = require('../lib/levelling')
+
 let tags = {
-  'main': 'MENU UTAMA',
-  'ai': 'MENU AI', 
-  'downloader': 'MENU DOWNLOADER',
-  'sticker': 'MENU CONVERT',
-  'xp': 'MENU EXP',
-  'admin': 'ADMIN MENU',
-  'islam': 'ISLAM MENU',
-  'fun': 'MENU FUN',
-  'videomaker': 'VIDEO MAKER',
-  'game': 'MENU GAME',
-  'github': 'MENU GITHUB',
-  'group': 'MENU GROUP',
-  'info': 'MENU INFO',
+  'simple': 'SIMPLE FEATURE',
+  'main': 'FEATURE UTAMA',
+  'ai': 'FEATURE AI', 
+  'admin': 'ADMIN FEATURE',
+  'owner': 'FEATURE OWNER',
+  'downloader': 'FEATURE DOWNLOADER',
+  'sticker': 'FEATURE CONVERT',
+  'xp': 'FEATURE XP',
+  'game': 'FEATURE GAME',
+  'islam': 'ISLAMIC FEATURE',
+  'fun': 'FEATURE FUN',
+  'github': 'FEATURE GITHUB',
+  'group': 'FEATURE GROUP',
+  'info': 'FEATURE INFO',
   'internet': 'INTERNET',
   'anon': 'ANONYMOUS',
-  'kerang': 'MENU KERANG',
-  'maker': 'MENU MAKER',
-  'owner': 'MENU OWNER',
+  'kerang': 'FEATURE KERANG',
+  'maker': 'FEATURE MAKER',
   'Pengubah Suara': 'PENGUBAH SUARA',
-  'premium': 'PREMIUM MENU',
-  'quotes' : 'MENU QUOTES',
-  'rpg': 'MENU RPG',
-  'stalk': 'MENU STALK',
+  'premium': 'PREMIUM FEATURE',
+  'quotes' : 'FEATURE QUOTES',
+  'rpg': 'FEATURE RPG',
+  'stalk': 'FEATURE STALK',
   'shortlink': 'SHORT LINK',
-  'tools': 'MENU TOOLS',
-  'asupan': 'ASUPAN MENU' 
+  'tools': 'FEATURE TOOLS',
+  'asupan': 'ASUPAN FEATURE' 
 }
 const wita = moment.tz('Asia/Makassar').format("HH:mm:ss")
 const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
+
 const ultah = new Date('November 19 2023 23:59:59')
     const sekarat = new Date().getTime() 
     const Kurang = ultah - sekarat
@@ -58,74 +60,110 @@ const ramadhan = new Date('Maret 9 2024 23:59:59')
     const oodetek = Math.floor( oKurangg % (1000 * 60) / 1000)
     const owners = global.nameowner
     const nameBot = global.namebot
+let handler = async (m, { conn, usedPrefix: _p }) => {
+      try {
+      let usrs = db.data.users[m.sender]   
+  
 const defaultMenu = {
   before: `
 Halo kak Selamat %ucpn
 
-*•━━━━ ❮❮ BOT INFO ❯❯ ━━━━━•*
-⌬ Name : ${nameBot}
-⌬ Uptime : %uptime 
-⌬ Library : Baileys Multi Device
-⌬ Version : %version
-⌬ Prefix Used : *[ %p ]*
-⌬ Database : %rtotalreg dari %totalreg 
-⌬ Memory Used : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-⌬ Battery: ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'Tidak Di ketahui'}
+%dash
 
-*•━━ ❮❮ OWNER INFO ❯❯ ━━•*
-⌬ Nama : ${owners}
-⌬ Nomor : wa.me/62181262166032
-⌬ Tanggal Lahir : 20 November 2004
-⌬ Ulang Tahun : ${ohari} Hari, ${ojam} Jam, ${onet} Menit, ${detek} Detik
+%m1 *B O T  I N F O*
+%m2 Name : ${nameBot}
+%m2 Uptime : %uptime 
+%m2 Library : Baileys Multi Device
+%m2 Version : %versi
+%m2 Prefix Used : *[ %p ]*
+%m2 Database : %rtotalreg dari %totalreg 
+%m2 Memory Used : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+%m2 Battery: ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'Tidak Di ketahui'}
+%m3
 
-*•━━ ❮❮ DETAIL USER ❯❯ ━━•*
-⌬ Nomor Pengguna :  %name 
-⌬ Status : %prems
-⌬ Role : %role
-⌬ Level : %level (%exp / %maxexp) %xp4levelup
-⌬ Total XP : %totalexp XP
-⌬ Limit : %limit / day
-⌬ Exp : %totalexp
-⌬ Level : %level
-⌬ Role : %role
+%m1 *O W N E R  I N F O*
+%m2 Nama : ${owners}
+%m2 Nomor : wa.me/%noOwn
+%m2 Tanggal Lahir : %lahir
+%m2 Ulang Tahun : ${ohari} Hari, ${ojam} Jam, ${onet} Menit, ${detek} Detik
+%m3
 
-*•━━ ❮❮ TIME ❯❯ ━━•*
-⌬ Tanggal : %date
-⌬ Tanggal Islam: %dateIslamic
-⌬ Hari : %week 
-⌬ Weton : %weton
-⌬ WIB   : %time
-⌬ WITA : ${wita}
-⌬ WIT   : ${wit}
+%m1 *D E T A I L  P E N G G U N A*
+%m2 Nomor Pengguna :  %name 
+%m2 Status : ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
+%m2 Premium : %prems
+%m2 Role : %role
+%m2 Level : %level (%exp / %maxexp) %xp4levelup
+%m2 Total XP : %totalexp XP
+%m2 Limit : %limit / day
+%m2 Exp : %totalexp
+%m2 Level : %level
+%m2 Role : %role
+%m3
 
-*•━━ ❮❮ INFO LAINNYA ❯❯ ━━•*
-⌬ Ramadhan 2024 : ${ooohari} Hari, ${ooojam} Jam, ${ooonet} Menit, ${oodetek} Detik
-⌬ Idul Fitri 2024 : ${oohari} Hari, ${oojam} Jam, ${oonet} Menit, ${odetek} Detik
+%m1 *T I M E*
+%m2 Tanggal : %date
+%m2 Tanggal Islam: %dateIslamic
+%m2 Hari : %week 
+%m2 Weton : %weton
+%m2 WIB   : %time
+%m2 WITA : ${wita}
+%m2 WIT   : ${wit}
+%m3
 
-*•━━ ❮❮ INFO COMMAND ❯❯ ━━•*
-*Ⓟ* = Premium
-*Ⓛ* = Limit
+%m1 *I N F O  L A I N N Y A*
+%m2 Ramadhan 2024 : ${ooohari} Hari, ${ooojam} Jam, ${ooonet} Menit, ${oodetek} Detik
+%m2 Idul Fitri 2024 : ${oohari} Hari, ${oojam} Jam, ${oonet} Menit, ${odetek} Detik
+%m3
+
+%m1 *I N F O  C M D*
+%m2 *Ⓟ* = Premium
+%m2 *Ⓛ* = Limit
+%m3
 `.trimStart(),
-  header: '*•━ ❮❮ %category ❯❯ ━•*',
-  body: '⌬ %cmd %islimit %isPremium',
-  footer: '',
-  after: ``,
+  header: '%cc %category %c1',
+  body: '%c2 %cmd %islimit %isPremium',
+  footer: '%c3',
+  after: `Expired Premium : \n${clockStringP(usrs.premiumTime - new Date())} : ''}\n%c4\n*Powered by %wm3*`,
 }
-let handler = async (m, { conn, usedPrefix: _p }) => {
-  try {
+
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
     let { exp, limit, level, role, registered } = global.db.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = await conn.getName(m.sender)
+    
     let d = new Date(new Date + 3600000)
+    let lahir = global.lahir
     let names = registered ? global.db.data.users[m.sender].name : conn.getName(m.sender)   
+   
     let premium = global.db.data.users[m.sender].premiumTime
-    let prems = `${premium > 0 ? 'Free':'Premium'}`
+    let prems = `${premium > 0 ? 'Yes': 'No'}`
     let locale = 'id'
     // d.getTimeZoneOffset()
     // Offset -420 is 18.00
     // Offset    0 is  0.00
     // Offset  420 is  7.00
+    let versi = global.versi
+    let noOwn = global.nomorown
+    // DEFAULT MENU
+    let dash = global.dashmenu
+    let m1 = global.dmenut
+      let m2 = global.dmenub
+      let m3 = global.dmenuf
+      let m4 = global.dmenub2
+      
+      // COMMAND MENU
+      let cc = global.cmenut
+      let c1 = global.cmenuh
+      let c2 = global.cmenub
+      let c3 = global.cmenuf
+      let c4 = global.cmenua
+      
+      // LOGO L P
+      let lprem = global.lopr
+      let llim = global.lolm
+      // WM
+      let wm3 = global.wm3
     const wib = moment.tz('Asia/Jakarta').format("HH:mm:ss")
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
@@ -153,6 +191,9 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
         setTimeout(resolve, 1000)
       }) * 1000
     }
+
+      	
+
     let ucpn = `${ucapan()}`
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
@@ -209,7 +250,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       totalexp: exp,
       xp4levelup: max - exp,
       github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]',
-      level, limit, ucpn, names, name, weton, week, date, dateIslamic, wib, wit, wita, prems, time, totalreg, rtotalreg, role,
+      level, limit, versi, lahir, prems, ucpn, dash, wm3, noOwn, m1, m2, m3, m4, cc, c1, c2, c3, c4, lprem, llim, names, name, weton, week, date, dateIslamic, wib, wit, wita, prems, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
@@ -219,7 +260,7 @@ contextInfo: {
 externalAdReply: {
 title: date,
 body: 'bodynya',
-thumbnailUrl: "https://i.postimg.cc/hGRXnJqw/sa.png",
+thumbnailUrl: "https://i.postimg.cc/Zqx80YRQ/1.webp",
 sourceUrl: "https://chat.whatsapp.com/Hvkzf6lLjLRHjtd67G1gfL",
 mediaType: 1,
 renderLargerThumbnail: true
@@ -249,7 +290,7 @@ await conn.sendFile(m.chat, 'https://telegra.ph/file/dc5a67d724b016574129b.jpg',
 }
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = /^(allmenu|menu|help|tod|menunya)$/i
+handler.command = /^(allfeature)$/i
 
 handler.exp = 3
 handler.register = true
@@ -265,7 +306,15 @@ function clockString(ms) {
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
-
+function clockStringP(ms) {
+  let ye = isNaN(ms) ? '--' : Math.floor(ms / 31104000000) % 10
+  let mo = isNaN(ms) ? '--' : Math.floor(ms / 2592000000) % 12
+  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000) % 30
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [ye, ' *Years 🗓️*\n',  mo, ' *Month 🌙*\n', d, ' *Days ☀️*\n', h, ' *Hours 🕐*\n', m, ' *Minute ⏰*\n', s, ' *Second ⏱️*'].map(v => v.toString().padStart(2, 0)).join('')
+}
 function ucapan() {
         const hour_now = moment.tz('Asia/Jakarta').format('HH')
         var ucapanWaktu = 'Pagi'
