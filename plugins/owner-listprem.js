@@ -4,9 +4,9 @@ let handler = async (m, { conn, args }) => {
   })
   let sortedP = users.map(toNumber('premiumTime')).sort(sort('premiumTime'))
   let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 10)) : Math.min(10, sortedP.length)
-  let { key } = await m.reply(`┌「 *premium* 」
-${sortedP.slice(0, len).map(({ jid, name, premiumTime, registered }, i) => `├ ${i + 1}. ( ${conn.msToDate(premiumTime - new Date() * 1)} ) ${registered ? name : conn.getName(jid)} @${jid.split('@')[0]}`).join`\n`}
-└────`.trim())
+  let { key } = await m.reply(`❏––––––『 Premium List 』––––––
+${sortedP.slice(0, len).map(({ jid, name, premiumTime, registered }, i) => `┊✦ ${i + 1}. ( ${conn.msToDate(premiumTime - new Date() * 1)} ) \n┊┗–${registered ? name : conn.getName(jid)}  \n--------------------------------------`).join`\n`}
+┗━═┅═━––––––๑`.trim())
   setTimeout(() => {
     if (db.data.chats[m.chat].deletemedia) conn.sendMessage(m.chat, { delete: key })
   }, db.data.chats[m.chat].deletemediaTime)

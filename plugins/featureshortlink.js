@@ -1,12 +1,12 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Shortlink Feature 〕ꕥ━⬣
-┃✦  .bitly <link>
-┃✦  .cuttly <link>
-┃✦  .tinyurl <link>
+┃✦  ${usedPrefix}bitly <link>
+┃✦  ${usedPrefix}cuttly <link>
+┃✦  ${usedPrefix}tinyurl <link>
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

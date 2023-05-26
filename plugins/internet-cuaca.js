@@ -22,7 +22,7 @@ Angin: ${json.wind.speed} km/jam
     `.trim())
 }
 
-handler.help = ['cuaca']
+handler.help = ['cuaca <kota>']
 handler.tags = ['info']
 handler.command = /^(cuaca|weather)$/i
 

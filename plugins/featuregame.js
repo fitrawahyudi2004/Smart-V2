@@ -1,17 +1,17 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Game Feature 〕ꕥ━⬣
-┃✦  .iqtest
-┃✦  .math <mode>
-┃✦  .suit
-┃✦  .suitpvp @tag
-┃✦  .suit2 @tag
-┃✦  .tictactoe [custom room name]
-┃✦  .ttt [custom room name]
-┃✦  .casino <jumlah> (Ⓛ)
+┃✦  ${usedPrefix}iqtest
+┃✦  ${usedPrefix}math <mode>
+┃✦  ${usedPrefix}suit
+┃✦  ${usedPrefix}suitpvp @tag
+┃✦  ${usedPrefix}suit2 @tag
+┃✦  ${usedPrefix}tictactoe [custom room name]
+┃✦  ${usedPrefix}ttt [custom room name]
+┃✦  ${usedPrefix}casino <jumlah> (Ⓛ)
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

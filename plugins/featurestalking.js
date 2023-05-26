@@ -1,10 +1,10 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Stalking Feature 〕ꕥ━⬣
-┃✦  .igstalk <username> (Ⓛ)
+┃✦  ${usedPrefix}igstalk <username> (Ⓛ)
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

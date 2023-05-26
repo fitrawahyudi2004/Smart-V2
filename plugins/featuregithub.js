@@ -1,11 +1,11 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Github Feature 〕ꕥ━⬣
-┃✦  .githubdl (Ⓛ)
-┃✦  .gitclone <url> (Ⓛ)
+┃✦  ${usedPrefix}githubdl (Ⓛ)
+┃✦  ${usedPrefix}gitclone <url> (Ⓛ)
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

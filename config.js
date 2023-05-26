@@ -72,7 +72,7 @@ global.APIs = {
   alpis: 'https://alpis.eu.org'
 }
 global.APIKeys = { 
-  'https://api.botcahx.live': '55higgQO' //isi apikey mu https://api.botcahx.live
+  'https://api.botcahx.live': 'fitra_wahyudi_' //isi apikey mu https://api.botcahx.live
 }
 
 global.multiplier = 45

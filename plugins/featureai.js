@@ -1,15 +1,15 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Ai Feature 〕ꕥ━⬣
-┃✦  .ai (Ⓛ)
-┃✦  .openai (Ⓛ)
-┃✦  .chatgpt (Ⓛ)
-┃✦  .aiimg
-┃✦  .aiimage
-┃✦  .ai-image
+┃✦  ${usedPrefix}ai (Ⓛ)
+┃✦  ${usedPrefix}openai (Ⓛ)
+┃✦  ${usedPrefix}chatgpt (Ⓛ)
+┃✦  ${usedPrefix}aiimg
+┃✦  ${usedPrefix}aiimage
+┃✦  ${usedPrefix}ai-image
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

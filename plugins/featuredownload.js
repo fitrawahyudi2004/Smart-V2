@@ -1,29 +1,29 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Downloader Feature 〕ꕥ━⬣
-┃✦  .youtube (Ⓛ)
-┃✦  .facebook (Ⓛ)
-┃✦  .gdrive (Ⓛ)
-┃✦  .gdrivedl (Ⓛ)
-┃✦  .ig <url> (Ⓛ)
-┃✦  .pinterest <keyword>
-┃✦  .play (Ⓛ)
-┃✦  .song (Ⓛ)
-┃✦  .ds (Ⓛ)
-┃✦  .ydl (Ⓛ)
-┃✦  .tiktok (Ⓛ)
-┃✦  .tiktokstalk <username>
-┃✦  .twitter (Ⓛ)
-┃✦  .twitdl (Ⓛ)
-┃✦  .twitterdl (Ⓛ)
-┃✦  .ytmp4
-┃✦  .yta (Ⓛ)
-┃✦  .ytmp3 (Ⓛ)
-┃✦  .yts <pencarian>
-┃✦  .ytsearch <pencarian>
+┃✦  ${usedPrefix}youtube (Ⓛ)
+┃✦  ${usedPrefix}facebook (Ⓛ)
+┃✦  ${usedPrefix}gdrive (Ⓛ)
+┃✦  ${usedPrefix}gdrivedl (Ⓛ)
+┃✦  ${usedPrefix}ig <url> (Ⓛ)
+┃✦  ${usedPrefix}pinterest <keyword>
+┃✦  ${usedPrefix}play (Ⓛ)
+┃✦  ${usedPrefix}song (Ⓛ)
+┃✦  ${usedPrefix}ds (Ⓛ)
+┃✦  ${usedPrefix}ydl (Ⓛ)
+┃✦  ${usedPrefix}tiktok (Ⓛ)
+┃✦  ${usedPrefix}tiktokstalk <username>
+┃✦  ${usedPrefix}twitter (Ⓛ)
+┃✦  ${usedPrefix}twitdl (Ⓛ)
+┃✦  ${usedPrefix}twitterdl (Ⓛ)
+┃✦  ${usedPrefix}ytmp4
+┃✦  ${usedPrefix}yta (Ⓛ)
+┃✦  ${usedPrefix}ytmp3 (Ⓛ)
+┃✦  ${usedPrefix}yts <pencarian>
+┃✦  ${usedPrefix}ytsearch <pencarian>
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

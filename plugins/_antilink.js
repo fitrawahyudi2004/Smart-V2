@@ -13,7 +13,7 @@ handler.before = async function (m, { user, isBotAdmin, isAdmin }) {
     let linkGC = ('https://chat.whatsapp.com/' + await conn.groupInviteCode(m.chat))
     let isLinkconnGc = new RegExp(linkGC, 'i')
     let isgclink = isLinkconnGc.test(m.text)
-    if (isgclink) return m.reply('*「 ANTI LINK 」*\n\nOrder denied, bot will not kick you.\nBecause the group link itself')
+    if (isgclink) return m.reply('*「 ANTI LINK 」*\n\nKick denied, bot will not kick you.\nBecause the group link itself')
     await conn.sendMessage(m.chat, { delete: m.key })
     await conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
   }

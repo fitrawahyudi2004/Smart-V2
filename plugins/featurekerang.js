@@ -1,34 +1,34 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Kerang Feature 〕ꕥ━⬣
-┃✦  apakah <teks>?
-┃✦  .gaycek
-┃✦  .pintarcek
-┃✦  .cantikcek
-┃✦  .gantengcek
-┃✦  .gabutcek
-┃✦  .gilacek
-┃✦  .lesbicek
-┃✦  .stresscek
-┃✦  .bucincek
-┃✦  .jonescek
-┃✦  .sadboycek
-┃✦  .howgay siapa?
-┃✦  .howpintar siapa?
-┃✦  .howcantik siapa?
-┃✦  .howganteng siapa?
-┃✦  .howgabut siapa?
-┃✦  .howgila siapa?
-┃✦  .howlesbi siapa?
-┃✦  .howstress siapa?
-┃✦  .howbucin siapa?
-┃✦  .howjones siapa?
-┃✦  .howsadboy siapa?
-┃✦  kapan <text>?
-┃✦  kapankah <text>?
+┃✦  ${usedPrefix}apakah <teks>?
+┃✦  ${usedPrefix}gaycek
+┃✦  ${usedPrefix}pintarcek
+┃✦  ${usedPrefix}cantikcek
+┃✦  ${usedPrefix}gantengcek
+┃✦  ${usedPrefix}gabutcek
+┃✦  ${usedPrefix}gilacek
+┃✦  ${usedPrefix}lesbicek
+┃✦  ${usedPrefix}stresscek
+┃✦  ${usedPrefix}bucincek
+┃✦  ${usedPrefix}jonescek
+┃✦  ${usedPrefix}sadboycek
+┃✦  ${usedPrefix}howgay siapa?
+┃✦  ${usedPrefix}howpintar siapa?
+┃✦  ${usedPrefix}howcantik siapa?
+┃✦  ${usedPrefix}howganteng siapa?
+┃✦  ${usedPrefix}howgabut siapa?
+┃✦  ${usedPrefix}howgila siapa?
+┃✦  ${usedPrefix}howlesbi siapa?
+┃✦  ${usedPrefix}howstress siapa?
+┃✦  ${usedPrefix}howbucin siapa?
+┃✦  ${usedPrefix}howjones siapa?
+┃✦  ${usedPrefix}howsadboy siapa?
+┃✦  ${usedPrefix}kapan <text>?
+┃✦  ${usedPrefix}kapankah <text>?
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

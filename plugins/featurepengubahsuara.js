@@ -1,24 +1,24 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Voice Changer Feature 〕ꕥ━⬣
-┃✦  .bass [vn]
-┃✦  .blown [vn]
-┃✦  .deep [vn]
-┃✦  .earrape [vn]
-┃✦  .fast [vn]
-┃✦  .fat [vn]
-┃✦  .nightcore [vn]
-┃✦  .reverse [vn]
-┃✦  .robot [vn]
-┃✦  .slow [vn]
-┃✦  .smooth [vn]
-┃✦  .tupai [vn]
-┃✦  .vibra [vn]
-┃✦  .tomp3
-┃✦  .tovn
+┃✦  ${usedPrefix}bass [vn]
+┃✦  ${usedPrefix}blown [vn]
+┃✦  ${usedPrefix}deep [vn]
+┃✦  ${usedPrefix}earrape [vn]
+┃✦  ${usedPrefix}fast [vn]
+┃✦  ${usedPrefix}fat [vn]
+┃✦  ${usedPrefix}nightcore [vn]
+┃✦  ${usedPrefix}reverse [vn]
+┃✦  ${usedPrefix}robot [vn]
+┃✦  ${usedPrefix}slow [vn]
+┃✦  ${usedPrefix}smooth [vn]
+┃✦  ${usedPrefix}tupai [vn]
+┃✦  ${usedPrefix}vibra [vn]
+┃✦  ${usedPrefix}tomp3
+┃✦  ${usedPrefix}tovn
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

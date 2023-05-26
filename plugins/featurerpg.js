@@ -1,33 +1,33 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Rpg Feature 〕ꕥ━⬣
-┃✦  .open <crate>
-┃✦  .gacha <crate>
-┃✦  .bank
-┃✦  .dompet
-┃✦  .dompet @user
-┃✦  .berdagang @tag (Ⓛ)
-┃✦  .berkebon (Ⓛ)
-┃✦  .build <args>
-┃✦  .upgrade <sell|buy> <args>
-┃✦  .membunuh @tag (Ⓛ)
-┃✦  .casino <jumlah> (Ⓛ)
-┃✦  .collect
-┃✦  .feed [pet type]
-┃✦  .fishop <sell|buy>  <item> <args>
-┃✦  .tokoikan <sell|buy> <item> <args>
-┃✦  .inv (Ⓛ)
-┃✦  .judi <jumlah>
-┃✦  .merampok @tag (Ⓛ)
-┃✦  .nabung <jumlah>
-┃✦  .narik <jumlah>
-┃✦  .nguli
-┃✦  .ojek
-┃✦  .pasar <jual> <args>
-┃✦  .transfer <Args>
+┃✦  ${usedPrefix}open <crate>
+┃✦  ${usedPrefix}gacha <crate>
+┃✦  ${usedPrefix}bank
+┃✦  ${usedPrefix}dompet
+┃✦  ${usedPrefix}dompet @user
+┃✦  ${usedPrefix}berdagang @tag (Ⓛ)
+┃✦  ${usedPrefix}berkebon (Ⓛ)
+┃✦  ${usedPrefix}build <args>
+┃✦  ${usedPrefix}upgrade <sell|buy> <args>
+┃✦  ${usedPrefix}membunuh @tag (Ⓛ)
+┃✦  ${usedPrefix}casino <jumlah> (Ⓛ)
+┃✦  ${usedPrefix}collect
+┃✦  ${usedPrefix}feed [pet type]
+┃✦  ${usedPrefix}fishop <sell|buy>  <item> <args>
+┃✦  ${usedPrefix}tokoikan <sell|buy> <item> <args>
+┃✦  ${usedPrefix}inv (Ⓛ)
+┃✦  ${usedPrefix}judi <jumlah>
+┃✦  ${usedPrefix}merampok @tag (Ⓛ)
+┃✦  ${usedPrefix}nabung <jumlah>
+┃✦  ${usedPrefix}narik <jumlah>
+┃✦  ${usedPrefix}nguli
+┃✦  ${usedPrefix}ojek
+┃✦  ${usedPrefix}pasar <jual> <args>
+┃✦  ${usedPrefix}transfer <Args>
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

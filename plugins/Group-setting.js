@@ -10,8 +10,8 @@ let handler = async (m, { isAdmin, isOwner, isBotAdmin, conn, args, usedPrefix, 
 	}
 let prefix = usedPrefix
 let bu = `Group telah di buka oleh @${m.sender.split`@`[0]} dan sekarang  semua member dapat mengirim pesan
-ketik *${usedPrefix}group buka*
-Untuk membuka grup!`.trim()            
+ketik *${usedPrefix}group tutup*
+Untuk memtutup grup!`.trim()            
     
 	let isClose = {
 		'open': 'not_announcement',

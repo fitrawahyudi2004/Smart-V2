@@ -1,24 +1,24 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Sticker Feature 〕ꕥ━⬣
-┃✦  .emojimix (Ⓛ)
-┊✦  .qc
-┊✦  .attp (Ⓛ)
-┊✦  .stickmaker (caption|reply img)
-┊✦  .stickerpack <Apa>
-┊✦  .stickermeme <teks>|<teks>
-┊✦  .smim <teks atas>|<teks bawah>
-┊✦  .sticker (Ⓛ)
-┊✦  .toimg (reply)
-┊✦  .tourl <reply image>
-┊✦  .tovideo (reply)
-┊✦  .ttp (Ⓛ)
-┊✦  .wm
-┊✦  .watermark
-┊✦  .togif (reply)
+┃✦  ${usedPrefix}emojimix (Ⓛ)
+┊✦  ${usedPrefix}qc
+┊✦  ${usedPrefix}attp (Ⓛ)
+┊✦  ${usedPrefix}stickmaker (caption|reply img)
+┊✦  ${usedPrefix}stickerpack <Apa>
+┊✦  ${usedPrefix}stickermeme <teks>|<teks>
+┊✦  ${usedPrefix}smim <teks atas>|<teks bawah>
+┊✦  ${usedPrefix}sticker (Ⓛ)
+┊✦  ${usedPrefix}toimg (reply)
+┊✦  ${usedPrefix}tourl <reply image>
+┊✦  ${usedPrefix}tovideo (reply)
+┊✦  ${usedPrefix}ttp (Ⓛ)
+┊✦  ${usedPrefix}wm
+┊✦  ${usedPrefix}watermark
+┊✦  ${usedPrefix}togif (reply)
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

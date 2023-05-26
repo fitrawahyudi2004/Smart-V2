@@ -1,33 +1,33 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Group Feature 〕ꕥ━⬣
-┃✦  .demote @user
-┃✦  .getpp <@tag/reply>
-┃✦  .promote @user
-┃✦  .enable <option>
-┃✦  .disable <option>
-┃✦  .gcsider
-┃✦  .hidetag <pesan>
-┃✦  .infogrup
-┃✦  .linkgroup
-┃✦  .setppgc
-┃✦  .grup <open/close>
-┃✦  .setwelcome <teks>
-┃✦  .tagadmin
-┃✦  .tagall <pesan>
-┃✦  .tagme
-┃✦  .totalpesan
-┃✦  .grouplist
-┃✦  .kick @user
-┃✦  .listadmin
-┃✦  .setbye <teks>
-┃✦  .tagadmin
-┃✦  .min
-┃✦  .unban
-┃✦  .unban
+┃✦  ${usedPrefix}demote @user
+┃✦  ${usedPrefix}getpp <@tag/reply>
+┃✦  ${usedPrefix}promote @user
+┃✦  ${usedPrefix}enable <option>
+┃✦  ${usedPrefix}disable <option>
+┃✦  ${usedPrefix}gcsider
+┃✦  ${usedPrefix}hidetag <pesan>
+┃✦  ${usedPrefix}infogrup
+┃✦  ${usedPrefix}linkgroup
+┃✦  ${usedPrefix}setppgc
+┃✦  ${usedPrefix}grup <open/close>
+┃✦  ${usedPrefix}setwelcome <teks>
+┃✦  ${usedPrefix}tagadmin
+┃✦  ${usedPrefix}tagall <pesan>
+┃✦  ${usedPrefix}tagme
+┃✦  ${usedPrefix}totalpesan
+┃✦  ${usedPrefix}grouplist
+┃✦  ${usedPrefix}kick @user
+┃✦  ${usedPrefix}listadmin
+┃✦  ${usedPrefix}setbye <teks>
+┃✦  ${usedPrefix}tagadmin
+┃✦  ${usedPrefix}min
+┃✦  ${usedPrefix}unban
+┃✦  ${usedPrefix}unban
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

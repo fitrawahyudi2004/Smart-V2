@@ -16,6 +16,7 @@ let tags = {
   'sticker': 'FEATURE CONVERT',
   'xp': 'FEATURE XP',
   'game': 'FEATURE GAME',
+  'random': 'FEATURE RANDOM',
   'islam': 'ISLAMIC FEATURE',
   'fun': 'FEATURE FUN',
   'github': 'FEATURE GITHUB',
@@ -32,7 +33,6 @@ let tags = {
   'stalk': 'FEATURE STALK',
   'shortlink': 'SHORT LINK',
   'tools': 'FEATURE TOOLS',
-  'asupan': 'ASUPAN FEATURE' 
 }
 const wita = moment.tz('Asia/Makassar').format("HH:mm:ss")
 const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
@@ -66,7 +66,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
   
 const defaultMenu = {
   before: `
-Halo kak Selamat %ucpn
+Halo kak, @${m.sender.split`@`[0]} Selamat %ucpn
 
 %dash
 

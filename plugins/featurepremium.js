@@ -1,10 +1,12 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Premium Feature 〕ꕥ━⬣
-┃✦  .join <chat.whatsapp.com>  (Ⓟ)
+┃✦  ${usedPrefix}join <chat.whatsapp.com>  (Ⓟ)
+┃✦  ${usedPrefix}cecan  (Ⓟ)
+┃✦  ${usedPrefix}asupan  (Ⓟ)
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

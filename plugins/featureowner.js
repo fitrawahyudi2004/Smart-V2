@@ -1,38 +1,36 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Owner Feature 〕ꕥ━⬣
-┃✦  .demote @user
-┃✦  .promote @user
-┃✦  .broadcast <teks>
-┃✦  .bc <teks>
-┃✦  .getdb <teks>
-┃✦  .getdatabase <teks>
-┃✦  .enable <option>
-┃✦  .disable <option>
-┃✦  .setwelcome <teks>
-┃✦  .addowner [@user]
-┃✦  .addprem [@user] <angka>
-┃✦  .ban
-┃✦  .bcgcbot <teks>
-┃✦  .hapusprem [@user]
-┃✦  >
-┃✦  =>
-┃✦  .addsewa <hari>
-┃✦  .getplugin [filename]
-┃✦  .resetlimit
-┃✦  .restart
-┃✦  .self
-┃✦  .public
-┃✦  .setbye <teks>
-┃✦  .setprefix [prefix]
-┃✦  .sf <teks>
-┃✦  .simulate <event> [@mention]
-┃✦  .pushkontak
-┃✦  .unban
-┃✦  .unban
+┃✦  ${usedPrefix}demote @user
+┃✦  ${usedPrefix}promote @user
+┃✦  ${usedPrefix}broadcast <teks>
+┃✦  ${usedPrefix}bc <teks>
+┃✦  ${usedPrefix}getdb <teks>
+┃✦  ${usedPrefix}getdatabase <teks>
+┃✦  ${usedPrefix}enable <option>
+┃✦  ${usedPrefix}disable <option>
+┃✦  ${usedPrefix}setwelcome <teks>
+┃✦  ${usedPrefix}addowner [@user]
+┃✦  ${usedPrefix}addprem [@user] <angka>
+┃✦  ${usedPrefix}ban
+┃✦  ${usedPrefix}bcgcbot <teks>
+┃✦  ${usedPrefix}hapusprem [@user]
+┃✦  ${usedPrefix}addsewa <hari>
+┃✦  ${usedPrefix}getplugin [filename]
+┃✦  ${usedPrefix}resetlimit
+┃✦  ${usedPrefix}restart
+┃✦  ${usedPrefix}self
+┃✦  ${usedPrefix}public
+┃✦  ${usedPrefix}setbye <teks>
+┃✦  ${usedPrefix}setprefix [prefix]
+┃✦  ${usedPrefix}sf <teks>
+┃✦  ${usedPrefix}simulate <event> [@mention]
+┃✦  ${usedPrefix}pushkontak
+┃✦  ${usedPrefix}unban
+┃✦  ${usedPrefix}unban
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

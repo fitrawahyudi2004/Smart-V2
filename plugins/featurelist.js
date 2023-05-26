@@ -1,38 +1,66 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
+  let ucpn = `${ucapan()}`
+  function ucapan() {
+    const hour_now = moment.tz('Asia/Jakarta').format('HH')
+    var ucapanWaktu = 'Pagi'
+    if (hour_now >= '03' && hour_now <= '10') {
+      ucapanWaktu = 'Pagi'
+    } else if (hour_now >= '10' && hour_now <= '15') {
+      ucapanWaktu = 'Siang'
+    } else if (hour_now >= '15' && hour_now <= '17') {
+      ucapanWaktu = 'Sore'
+    } else if (hour_now >= '17' && hour_now <= '18') {
+      ucapanWaktu = 'Selamat Petang'
+    } else if (hour_now >= '18' && hour_now <= '23') {
+      ucapanWaktu = 'Malam'
+    } else {
+      ucapanWaktu = 'Selamat Malam'
+    }	
+    return ucapanWaktu
+  }
+  let anu = `
+  Halo Kak @${m.sender.split`@`[0]}, Selamat ${ucpn}
 
-  let anu = `┏━━━ꕥ〔 List Feature 〕ꕥ━⬣
-┃✾ .mainfeature
-┃✾ .aifeature
-┃✾ .adminfeature
-┃✾ .ownerfeature
-┃✾ .downloaderfeature
-┃✾ .stickerfeature
-┃✾ .xpfeature
-┃✾ .gamefeature
-┃✾ .islamicfeature
-┃✾ .funfeature
-┃✾ .githubfeature
-┃✾ .groupfeature
-┃✾ .infofeature
-┃✾ .internetfeature
-┃✾ .anonfeature
-┃✾ .kerangfeature
-┃✾ .makerfeature
-┃✾ .voicechangerfeature
-┃✾ .premiumfeature
-┃✾ .quotesfeature
-┃✾ .rpgfeature
-┃✾ .stalkfeature
-┃✾ .shortlinkfeature
-┃✾ .toolsfeature
-┃✾ .asupanfeature
+  Di bawah ini adalah List Feature yang ada di Smart Bot V7
+
+┏━━━ꕥ〔 List Feature 〕ꕥ━⬣
+┃✾ ${usedPrefix}mainfeature
+┃✾ ${usedPrefix}aifeature
+┃✾ ${usedPrefix}adminfeature
+┃✾ ${usedPrefix}ownerfeature
+┃✾ ${usedPrefix}downloaderfeature
+┃✾ ${usedPrefix}stickerfeature
+┃✾ ${usedPrefix}xpfeature
+┃✾ ${usedPrefix}gamefeature
+┃✾ ${usedPrefix}islamicfeature
+┃✾ ${usedPrefix}funfeature
+┃✾ ${usedPrefix}githubfeature
+┃✾ ${usedPrefix}groupfeature
+┃✾ ${usedPrefix}infofeature
+┃✾ ${usedPrefix}internetfeature
+┃✾ ${usedPrefix}anonfeature
+┃✾ ${usedPrefix}kerangfeature
+┃✾ ${usedPrefix}makerfeature
+┃✾ ${usedPrefix}voicechangerfeature
+┃✾ ${usedPrefix}premiumfeature
+┃✾ ${usedPrefix}quotesfeature
+┃✾ ${usedPrefix}rpgfeature
+┃✾ ${usedPrefix}randomfeature
+┃✾ ${usedPrefix}stalkfeature
+┃✾ ${usedPrefix}shortlinkfeature
+┃✾ ${usedPrefix}toolsfeature
 ┗━━━━━━━━━ꕥ
 ┏━━━ꕥ〔 All Feature 〕ꕥ━⬣
 ┃✾ .allfeature
-┗━━━━━━━━━ꕥ`
+┗━━━━━━━━━ꕥ
+
+⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕
+
+ Powered  By FWD`
+
 conn.reply(m.chat, anu, m) 
 }
 

@@ -1,18 +1,22 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
+  let anu = `
 
-  let anu = `┏━━━ꕥ〔 Asupan Feature 〕ꕥ━⬣
-┃✦  .asupan
-┗━━━━━━━━━ꕥ`
+┏━━━ꕥ〔 Random Feature 〕ꕥ━⬣
+┃✦ ${usedPrefix}katabijak2
+┃✦ ${usedPrefix}katabucin
+┗━━━━━━━━━ꕥ
+`
+
 conn.reply(m.chat, anu, m) 
 }
 
 
-handler.help = ['asupanfeature']
+handler.help = ['randomfeature']
 handler.tags = ['simple']
-handler.command = /^(asupanfeature)$/i
+handler.command = /^(randomfeature)$/i
 
 handler.limit = false
 handler.register = true

@@ -1,36 +1,36 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Information Feature 〕ꕥ━⬣
-┃✦  .disk
-┃✦  .infogempa (Ⓛ) (Ⓟ)
-┃✦  .gempa (Ⓛ) (Ⓟ)
-┃✦  .bannedlist
-┃✦  .owner (Ⓛ)
-┃✦  .creator (Ⓛ)
-┃✦  .database
-┃✦  .user
-┃✦  .bug <laporan>
-┃✦  .report <laporan>
-┃✦  .runtime
-┃✦  .speedtest
-┃✦  .status
-┃✦  .statusbot
-┃✦  .botstatus
-┃✦  .totalfitur
-┃✦  .covid <negara>
-┃✦  .cuaca
-┃✦  .blocklist
-┃✦  .donasi
-┃✦  .donate
-┃✦  .owner
-┃✦  .creator
-┃✦  .premlist [angka]
-┃✦  .ping
-┃✦  .speed
-┃✦  .profile [@user] (Ⓛ)
+┃✦  ${usedPrefix}disk
+┃✦  ${usedPrefix}infogempa (Ⓛ) (Ⓟ)
+┃✦  ${usedPrefix}gempa (Ⓛ) (Ⓟ)
+┃✦  ${usedPrefix}bannedlist
+┃✦  ${usedPrefix}owner (Ⓛ)
+┃✦  ${usedPrefix}creator (Ⓛ)
+┃✦  ${usedPrefix}database
+┃✦  ${usedPrefix}user
+┃✦  ${usedPrefix}bug <laporan>
+┃✦  ${usedPrefix}report <laporan>
+┃✦  ${usedPrefix}runtime
+┃✦  ${usedPrefix}speedtest
+┃✦  ${usedPrefix}status
+┃✦  ${usedPrefix}statusbot
+┃✦  ${usedPrefix}botstatus
+┃✦  ${usedPrefix}totalfitur
+┃✦  ${usedPrefix}covid <negara>
+┃✦  ${usedPrefix}cuaca
+┃✦  ${usedPrefix}blocklist
+┃✦  ${usedPrefix}donasi
+┃✦  ${usedPrefix}donate
+┃✦  ${usedPrefix}owner
+┃✦  ${usedPrefix}creator
+┃✦  ${usedPrefix}premlist [angka]
+┃✦  ${usedPrefix}ping
+┃✦  ${usedPrefix}speed
+┃✦  ${usedPrefix}profile [@user] (Ⓛ)
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

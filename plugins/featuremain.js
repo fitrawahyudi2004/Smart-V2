@@ -1,18 +1,18 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Main Feature 〕ꕥ━⬣
-┃✦  .afk [alasan]
-┃✦  .deleteprem
-┃✦  .dashboard
-┃✦  .dash
-┃✦  .views
-┃✦  .delete
-┃✦  .gcbot
-┃✦  .menu
-┃✦  .mode
+┃✦  ${usedPrefix}afk [alasan]
+┃✦  ${usedPrefix}deleteprem
+┃✦  ${usedPrefix}dashboard
+┃✦  ${usedPrefix}dash
+┃✦  ${usedPrefix}views
+┃✦  ${usedPrefix}delete
+┃✦  ${usedPrefix}gcbot
+┃✦  ${usedPrefix}menu
+┃✦  ${usedPrefix}mode
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

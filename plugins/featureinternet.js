@@ -1,42 +1,42 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Internet Feature 〕ꕥ━⬣
-┃✦  .buatcatatan <title|isi>
-┃✦  .hapuscatatan title
-┃✦  .lihatcatatan <title>
-┃✦  .ppcp
-┃✦  .china
-┃✦  .indonesia
-┃✦  .japan
-┃✦  .vietnam
-┃✦  .thailand
-┃✦  .korea
-┃✦  .malaysia
-┃✦  .pinterest <keyword>
-┃✦  .yts <pencarian>
-┃✦  .ytsearch <pencarian>
-┃✦  .animal <hewan>
-┃✦  .fetch <url>
-┃✦  .get <url>
-┃✦  .image <query>
-┃✦  .gimage <query>
-┃✦  .googleimage <query>
-┃✦  .google <pencarian>
-┃✦  .googlef <pencarian>
-┃✦  .kodebahasa
-┃✦  .lirik <Apa>
-┃✦  .dnslookup
-┃✦  .hackertarget
-┃✦  .lookup
-┃✦  .dns
-┃✦  .getsesi
-┃✦  .katabijak <opsi>
-┃✦  .stickerpack <Apa>
-┃✦  .short <url> <type>
-┃✦  .zodiac 2002 02 25
+┃✦  ${usedPrefix}buatcatatan <title|isi>
+┃✦  ${usedPrefix}hapuscatatan title
+┃✦  ${usedPrefix}lihatcatatan <title>
+┃✦  ${usedPrefix}ppcp
+┃✦  ${usedPrefix}china
+┃✦  ${usedPrefix}indonesia
+┃✦  ${usedPrefix}japan
+┃✦  ${usedPrefix}vietnam
+┃✦  ${usedPrefix}thailand
+┃✦  ${usedPrefix}korea
+┃✦  ${usedPrefix}malaysia
+┃✦  ${usedPrefix}pinterest <keyword>
+┃✦  ${usedPrefix}yts <pencarian>
+┃✦  ${usedPrefix}ytsearch <pencarian>
+┃✦  ${usedPrefix}animal <hewan>
+┃✦  ${usedPrefix}fetch <url>
+┃✦  ${usedPrefix}get <url>
+┃✦  ${usedPrefix}image <query>
+┃✦  ${usedPrefix}gimage <query>
+┃✦  ${usedPrefix}googleimage <query>
+┃✦  ${usedPrefix}google <pencarian>
+┃✦  ${usedPrefix}googlef <pencarian>
+┃✦  ${usedPrefix}kodebahasa
+┃✦  ${usedPrefix}lirik <Apa>
+┃✦  ${usedPrefix}dnslookup
+┃✦  ${usedPrefix}hackertarget
+┃✦  ${usedPrefix}lookup
+┃✦  ${usedPrefix}dns
+┃✦  ${usedPrefix}getsesi
+┃✦  ${usedPrefix}katabijak <opsi>
+┃✦  ${usedPrefix}stickerpack <Apa>
+┃✦  ${usedPrefix}short <url> <type>
+┃✦  ${usedPrefix}zodiac 2002 02 25
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

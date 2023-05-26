@@ -1,27 +1,27 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Fun Feature 〕ꕥ━⬣
-┃✦  .cekpacar (Ⓛ)
-┃✦  .alay
-┃✦  .alay (Ⓛ)
-┃✦  .namaninja <teks>
-┃✦  .purba <teks>
-┃✦  .meme (Ⓛ)
-┃✦  .pick <jumlah> <teks>
-┃✦  .putus (Ⓛ)
-┃✦  .simi <teks>
-┃✦  .simsimi <teks>
-┃✦  .simih <teks>
-┃✦  .taugasih (Ⓛ)
-┃✦  .tembak @tag (Ⓛ)
-┃✦  .terima @tag (Ⓛ)
-┃✦  .tolak @tag (Ⓛ)
-┃✦  .dare (Ⓛ)
-┃✦  .truth (Ⓛ)
-┃✦  .zodiac 2002 02 25
+┃✦  ${usedPrefix}cekpacar (Ⓛ)
+┃✦  ${usedPrefix}alay
+┃✦  ${usedPrefix}alay (Ⓛ)
+┃✦  ${usedPrefix}namaninja <teks>
+┃✦  ${usedPrefix}purba <teks>
+┃✦  ${usedPrefix}meme (Ⓛ)
+┃✦  ${usedPrefix}pick <jumlah> <teks>
+┃✦  ${usedPrefix}putus (Ⓛ)
+┃✦  ${usedPrefix}simi <teks>
+┃✦  ${usedPrefix}simsimi <teks>
+┃✦  ${usedPrefix}simih <teks>
+┃✦  ${usedPrefix}taugasih (Ⓛ)
+┃✦  ${usedPrefix}tembak @tag (Ⓛ)
+┃✦  ${usedPrefix}terima @tag (Ⓛ)
+┃✦  ${usedPrefix}tolak @tag (Ⓛ)
+┃✦  ${usedPrefix}dare (Ⓛ)
+┃✦  ${usedPrefix}truth (Ⓛ)
+┃✦  ${usedPrefix}zodiac 2002 02 25
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

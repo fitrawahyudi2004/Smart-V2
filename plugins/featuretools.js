@@ -1,52 +1,52 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Tools Feature 〕ꕥ━⬣
-┃✦  .brainly (Ⓛ)
-┃✦  .igstalk <username> (Ⓛ)
-┃✦  .yts <pencarian>
-┃✦  .ytsearch <pencarian>
-┃✦  .githubsearch <pencarian>
-┃✦  .trad <leng> <text>
-┃✦  .lihatpp [@user]
-┃✦  .tahta <teks>
-┃✦  .tts <teks>
-┃✦  .apk (kata kunci)
-┃✦  .base64
-┃✦  .binary <teks>
-┃✦  .encrypt
-┃✦  .font <text> (Ⓛ)
-┃✦  .styletext <text> (Ⓛ)
-┃✦  .halah <teks>
-┃✦  .hilih <teks>
-┃✦  .huluh <teks>
-┃✦  .heleh <teks>
-┃✦  .holoh <teks>
-┃✦  .kalkulator <soal>
-┃✦  .npmsearch
-┃✦  .ocr (Ⓛ)
-┃✦  .totext (Ⓛ)
-┃✦  .qr <teks>
-┃✦  .qrcode <teks>
-┃✦  .react <emoji>
-┃✦  .readmore <teks>|<teks>
-┃✦  .repeat <teks> (Ⓛ)
-┃✦  .say <teks>
-┃✦  .sshp (Ⓛ)
-┃✦  .sshandphone (Ⓛ)
-┃✦  .sstablet (Ⓛ)
-┃✦  .ssweb (Ⓛ)
-┃✦  .sshp (Ⓛ)
-┃✦  .sspc (Ⓛ)
-┃✦  .tomp3 (reply)
-┃✦  .ceknomor
-┃✦  .truecaller
-┃✦  .unbanwa
-┃✦  .whois
-┃✦  .whoislookup
-┃✦  .zodiac 2002 02 25
+┃✦  ${usedPrefix}brainly (Ⓛ)
+┃✦  ${usedPrefix}igstalk <username> (Ⓛ)
+┃✦  ${usedPrefix}yts <pencarian>
+┃✦  ${usedPrefix}ytsearch <pencarian>
+┃✦  ${usedPrefix}githubsearch <pencarian>
+┃✦  ${usedPrefix}trad <leng> <text>
+┃✦  ${usedPrefix}lihatpp [@user]
+┃✦  ${usedPrefix}tahta <teks>
+┃✦  ${usedPrefix}tts <teks>
+┃✦  ${usedPrefix}apk (kata kunci)
+┃✦  ${usedPrefix}base64
+┃✦  ${usedPrefix}binary <teks>
+┃✦  ${usedPrefix}encrypt
+┃✦  ${usedPrefix}font <text> (Ⓛ)
+┃✦  ${usedPrefix}styletext <text> (Ⓛ)
+┃✦  ${usedPrefix}halah <teks>
+┃✦  ${usedPrefix}hilih <teks>
+┃✦  ${usedPrefix}huluh <teks>
+┃✦  ${usedPrefix}heleh <teks>
+┃✦  ${usedPrefix}holoh <teks>
+┃✦  ${usedPrefix}kalkulator <soal>
+┃✦  ${usedPrefix}npmsearch
+┃✦  ${usedPrefix}ocr (Ⓛ)
+┃✦  ${usedPrefix}totext (Ⓛ)
+┃✦  ${usedPrefix}qr <teks>
+┃✦  ${usedPrefix}qrcode <teks>
+┃✦  ${usedPrefix}react <emoji>
+┃✦  ${usedPrefix}readmore <teks>|<teks>
+┃✦  ${usedPrefix}repeat <teks> (Ⓛ)
+┃✦  ${usedPrefix}say <teks>
+┃✦  ${usedPrefix}sshp (Ⓛ)
+┃✦  ${usedPrefix}sshandphone (Ⓛ)
+┃✦  ${usedPrefix}sstablet (Ⓛ)
+┃✦  ${usedPrefix}ssweb (Ⓛ)
+┃✦  ${usedPrefix}sshp (Ⓛ)
+┃✦  ${usedPrefix}sspc (Ⓛ)
+┃✦  ${usedPrefix}tomp3 (reply)
+┃✦  ${usedPrefix}ceknomor
+┃✦  ${usedPrefix}truecaller
+┃✦  ${usedPrefix}unbanwa
+┃✦  ${usedPrefix}whois
+┃✦  ${usedPrefix}whoislookup
+┃✦  ${usedPrefix}zodiac 2002 02 25
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }

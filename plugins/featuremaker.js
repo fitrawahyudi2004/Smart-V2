@@ -1,15 +1,15 @@
 let fetch = require('node-fetch')
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, args, command }) => {
+let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   let anu = `┏━━━ꕥ〔 Maker Feature 〕ꕥ━⬣
-┃✦  .lolimaker
-┃✦  .carbon <text>
-┃✦  .hornycard
-┃✦  .hornylicense
-┃✦  .quotemaker <teks>|<wm> (Ⓛ)
-┃✦  .textpro <effect> <text>
+┃✦  ${usedPrefix}lolimaker
+┃✦  ${usedPrefix}carbon <text>
+┃✦  ${usedPrefix}hornycard
+┃✦  ${usedPrefix}hornylicense
+┃✦  ${usedPrefix}quotemaker <teks>|<wm> (Ⓛ)
+┃✦  ${usedPrefix}textpro <effect> <text>
 ┗━━━━━━━━━ꕥ`
 conn.reply(m.chat, anu, m) 
 }
