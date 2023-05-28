@@ -23,6 +23,7 @@ var handler = async (m, {
 		m.reply(`[!] Fitur Error.`)
 	}
 };
+
 handler.command = handler.help = ['infogempa', 'gempa'];
 handler.tags = ['info'];
 handler.premium = true;
