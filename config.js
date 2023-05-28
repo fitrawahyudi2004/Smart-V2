@@ -19,7 +19,7 @@ global.mail = 'fitrawahyudi739@gmail.com'
 global.dana = '6281262166032'
 global.pulsa = '6281262166032'
 global.gopay = '6281262166032'
-global.namebot = 'Smart Bot'
+global.namebot = 'Smart Bot V12'
 global.gc = 'https://chat.whatsapp.com/Hvkzf6lLjLRHjtd67G1gfL'
 global.web = 'https://github.com/fitrawahyudi2004'
 global.instagram = 'https://instagram.com/fitra_wahyudi_'
@@ -65,14 +65,17 @@ global.lolm = 'Ⓛ' //LOGO FREE ON MENU.JS
 global.htjava = '⫹⫺'    //hiasan Doang :v
 global.hsquere = ['⛶','❏','⫹⫺']
 
+global.lolkey = 'fitra_wahyudi_'
 global.btc = 'fitra_wahyudi_' //Daftar terlebih dahulu https://api.botcahx.live
 global.lann = 'trial' //Note Key Ini Hanya Bertahan Selama 4 Day Sejak Config.js update! lebih baik register di https://api.lannn.me
 global.APIs = { 
   tio: 'https://api.botcahx.live',
-  alpis: 'https://alpis.eu.org'
+  alpis: 'https://alpis.eu.org',
+  lol: 'https://api.lolhuman.xyz'
 }
 global.APIKeys = { 
-  'https://api.botcahx.live': 'fitra_wahyudi_' //isi apikey mu https://api.botcahx.live
+  'https://api.botcahx.live': 'fitra_wahyudi_',
+  'https://api.lolhuman.xyz': 'fitra_wahyudi_' //isi apikey mu https://api.botcahx.live
 }
 
 global.multiplier = 45

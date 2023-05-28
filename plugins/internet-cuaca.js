@@ -11,6 +11,8 @@ let handler = async (m, { text, usedPrefix, command }) => {
     let json = await res.json()
     if (json.cod != 200) throw json
     m.reply(`
+─────〔 *Info Cuaca* 〕─────
+
 Lokasi: ${json.name}
 Negara: ${json.sys.country}
 Cuaca: ${json.weather[0].description}

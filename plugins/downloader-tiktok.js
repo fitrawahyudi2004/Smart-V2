@@ -24,7 +24,7 @@ await conn.sendFile(m.chat, video, 'tiktok.mp4', `
 \n*Username*: ${username}`, m)
 conn.sendFile(m.chat, audio, 'tikmp3.opus', null, m)
 };
-handler.help = ['tiktok']
+handler.help = ['tiktok <link>']
 handler.command = /^(tiktok|tt|tiktokdl|tiktoknowm|dltt)$/i
 handler.tags = ['downloader'];
 handler.limit = true;

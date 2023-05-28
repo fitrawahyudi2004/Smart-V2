@@ -1,6 +1,7 @@
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
 process.env.TZ = 'Asia/Jakarta'
 let fs = require('fs')
+let os = require('os')
 let path = require('path')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
@@ -71,60 +72,70 @@ Halo kak, @${m.sender.split`@`[0]} Selamat %ucpn
 %dash
 
 %m1 *B O T  I N F O*
-%m2 Name : ${nameBot}
-%m2 Uptime : %uptime 
-%m2 Library : Baileys Multi Device
-%m2 Version : %versi
-%m2 Prefix Used : *[ %p ]*
-%m2 Database : %rtotalreg dari %totalreg 
-%m2 Memory Used : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-%m2 Battery: ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'Tidak Di ketahui'}
+%m2 ⬡ Name : ${nameBot}
+%m2 ⬡ Uptime : %uptime 
+%m2 ⬡ Library : Baileys Multi Device
+%m2 ⬡ Version : %versi
+%m2 ⬡ Prefix Used : *[ %p ]*
+%m2 ⬡ Database : %rtotalreg dari %totalreg 
+%m2 ⬡ Memory Used : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+%m2 ⬡ Battery: ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'Tidak Di ketahui'}
+%m2 ⬡ OS Platform : ${os.platform()}
 %m3
 
 %m1 *O W N E R  I N F O*
-%m2 Nama : ${owners}
-%m2 Nomor : wa.me/%noOwn
-%m2 Tanggal Lahir : %lahir
-%m2 Ulang Tahun : ${ohari} Hari, ${ojam} Jam, ${onet} Menit, ${detek} Detik
+%m2 ⬡ Nama : ${owners}
+%m2 ⬡ Nomor : wa.me/%noOwn
+%m2 ⬡ Tanggal Lahir : %lahir
+%m2 ⬡ Ulang Tahun : ${ohari} Hari, ${ojam} Jam, ${onet} Menit, ${detek} Detik
 %m3
 
 %m1 *D E T A I L  P E N G G U N A*
-%m2 Nomor Pengguna :  %name 
-%m2 Status : ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
-%m2 Premium : %prems
-%m2 Role : %role
-%m2 Level : %level (%exp / %maxexp) %xp4levelup
-%m2 Total XP : %totalexp XP
-%m2 Limit : %limit / day
-%m2 Exp : %totalexp
-%m2 Level : %level
-%m2 Role : %role
+%m2 ⬡ Nomor Pengguna :  %name 
+%m2 ⬡ Status : ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
+%m2 ⬡ Premium : %prems
+%m2 ⬡ Role : %role
+%m2 ⬡ Level : %level (%exp / %maxexp) %xp4levelup
+%m2 ⬡ Total XP : %totalexp XP
+%m2 ⬡ Limit : %limit / day
+%m2 ⬡ Exp : %totalexp
+%m2 ⬡ Level : %level
+%m2 ⬡ Role : %role
 %m3
 
 %m1 *T I M E*
-%m2 Tanggal : %date
-%m2 Tanggal Islam: %dateIslamic
-%m2 Hari : %week 
-%m2 Weton : %weton
-%m2 WIB   : %time
-%m2 WITA : ${wita}
-%m2 WIT   : ${wit}
+%m2 ⬡ Tanggal : %date
+%m2 ⬡ Tanggal Islam: %dateIslamic
+%m2 ⬡ Hari : %week 
+%m2 ⬡ Weton : %weton
+%m2 ⬡ WIB   : %time
+%m2 ⬡ WITA : ${wita}
+%m2 ⬡ WIT   : ${wit}
 %m3
 
 %m1 *I N F O  L A I N N Y A*
-%m2 Ramadhan 2024 : ${ooohari} Hari, ${ooojam} Jam, ${ooonet} Menit, ${oodetek} Detik
-%m2 Idul Fitri 2024 : ${oohari} Hari, ${oojam} Jam, ${oonet} Menit, ${odetek} Detik
+%m2 ⬡ Ramadhan 2024 : ${ooohari} Hari, ${ooojam} Jam, ${ooonet} Menit, ${oodetek} Detik
+%m2 ⬡ Idul Fitri 2024 : ${oohari} Hari, ${oojam} Jam, ${oonet} Menit, ${odetek} Detik
 %m3
 
 %m1 *I N F O  C M D*
-%m2 *Ⓟ* = Premium
-%m2 *Ⓛ* = Limit
+%m2 ⬡ *Ⓟ* = Premium
+%m2 ⬡ *Ⓛ* = Limit
 %m3
 `.trimStart(),
   header: '%cc %category %c1',
   body: '%c2 %cmd %islimit %isPremium',
   footer: '%c3',
-  after: `Expired Premium : \n${clockStringP(usrs.premiumTime - new Date())} : ''}\n%c4\n*Powered by %wm3*`,
+  after: `Expired Premium : \n${clockStringP(usrs.premiumTime - new Date())} : ''}\n
+  ╭──〔  THANKS TO  〕─⬣
+⫹⫺ Allah SWT
+⫹⫺ Orang Tua
+⫹⫺ Kesabaran
+⫹⫺ Penyemangat
+⫹⫺ Ijol Doorsmeer
+⫹⫺ Pak Kurin
+╰─────────────⬣
+%c4\n*Powered by %wm3*`,
 }
 
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
@@ -265,6 +276,20 @@ sourceUrl: "https://chat.whatsapp.com/Hvkzf6lLjLRHjtd67G1gfL",
 mediaType: 1,
 renderLargerThumbnail: true
 }}}, { quoted: m})
+const fkontak = {
+	"key": {
+    "participants":"0@s.whatsapp.net",
+		"remoteJid": "status@broadcast",
+		"fromMe": false,
+		"id": "Halo"
+	},
+	"message": {
+		"contactMessage": {
+			"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+		}
+	},
+	"participant": "0@s.whatsapp.net"
+}
       /**const ftroli = {
 	key : {
                           participant : '0@s.whatsapp.net'
@@ -290,7 +315,7 @@ await conn.sendFile(m.chat, 'https://telegra.ph/file/dc5a67d724b016574129b.jpg',
 }
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = /^(allfeature)$/i
+handler.command = /^(all|open)(feature)$/i
 
 handler.exp = 3
 handler.register = true

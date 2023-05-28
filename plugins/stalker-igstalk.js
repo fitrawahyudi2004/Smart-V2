@@ -21,7 +21,8 @@ Contoh: ${usedPrefix}${command} jokowi
 handler.help = ['igstalk <username>']
 handler.tags = ['stalk']
 handler.command = /^(igstalk)$/i
-handler.limit = true
+handler.limit = false
+handler.register = true
 
 module.exports = handler
 

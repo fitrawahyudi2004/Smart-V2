@@ -1,5 +1,5 @@
 var name = global.nameowner
-var numberowner = global.numberowner
+var numberowner = global.nomorown
 var gmail = global.mail
 const { 
 default: 

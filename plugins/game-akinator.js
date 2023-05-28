@@ -1,3 +1,4 @@
+const { trusted } = require('mongoose')
 let fetch = require('node-fetch')
 
 let handler = async (m, { conn, usedPrefix, command, text }) => {
@@ -9,12 +10,13 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 		aki.soal = null
 		m.reply('Berhasil keluar dari sesi Akinator.')
 	} else {
-		//if (aki.sesi) return conn.reply(m.chat, 'Anda masih berada dalam sesi Akinator', aki.soal)
+		if (aki.sesi) return conn.reply(m.chat, 'Anda masih berada dalam sesi Akinator', aki.soal)
 		try {
-			let res = await fetch(`https://api.lolhuman.xyz/api/akinator/start?apikey=95cfe4f34983e05a49c3496f`)
+			let res = await fetch(`https://api.lolhuman.xyz/api/akinator/start?apikey=${lolkey}`)
 			let anu = await res.json()
 			if (anu.status !== 200) throw Error('Emror')
 			let { server, frontaddr, session, signature, question, progression, step } = anu.result
+			aki.sesi = true
 			aki.server = server
 			aki.frontaddr = frontaddr
 			aki.session = session

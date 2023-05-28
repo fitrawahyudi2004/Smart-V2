@@ -10,7 +10,7 @@
       "level": 0,
       "pasangan": "",
       "pc": 0,
-      "exp": 2234,
+      "exp": 5026,
       "coin": 0,
       "atm": 0,
       "limit": 100,
@@ -145,8 +145,8 @@
       "name": "+62 812-6216-6032",
       "age": -1,
       "regTime": -1,
-      "premium": true,
-      "premiumTime": 1716569399441,
+      "premium": false,
+      "premiumTime": 0,
       "job": "Pengangguran",
       "lbars": "[▒▒▒▒▒▒▒▒▒]",
       "role": "Warrior V",
@@ -191,7 +191,41 @@
       "bibitapel": 0,
       "bibitmangga": 0,
       "bibitjeruk": 0,
-      "premiumDate": -1
+      "premiumDate": -1,
+      "akinator": {
+        "sesi": true,
+        "server": "https://srv14.akinator.com:9442/ws",
+        "frontaddr": "MTUxLjgwLjM2LjEzOA==",
+        "session": 197,
+        "signature": 1987079557,
+        "question": "Apakah dia orang Indonesia?",
+        "progression": 0,
+        "step": 0,
+        "soal": {
+          "key": {
+            "remoteJid": "6281262166032@s.whatsapp.net",
+            "fromMe": true,
+            "id": "BAE502650496D5ED"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "🎮 *Akinator* 🎮\n\n@6281262166032\nApakah dia orang Indonesia?\n\nBalas Pesan ini dan ketik salah satu angka di bawah ini\n\n0 - Ya\n1 - Tidak\n2 - Saya Tidak Tau\n3 - Mungkin\n4 - Mungkin Tidak\n\n*.akinator end* untuk keluar dari sesi Akinator",
+              "contextInfo": {
+                "stanzaId": "E83953ED152E1082A45F70B616348475",
+                "participant": "6281262166032@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".akinator"
+                },
+                "mentionedJid": [
+                  "6281262166032@s.whatsapp.net"
+                ]
+              }
+            }
+          },
+          "messageTimestamp": "1685259854",
+          "status": "PENDING"
+        }
+      }
     },
     "6282180255595@s.whatsapp.net": {
       "healt": 100,
@@ -203,7 +237,7 @@
       "level": 0,
       "pasangan": "",
       "pc": 0,
-      "exp": 7,
+      "exp": 55,
       "coin": 0,
       "atm": 0,
       "limit": 100,
@@ -384,7 +418,18 @@
       "bibitapel": 0,
       "bibitmangga": 0,
       "bibitjeruk": 0,
-      "premiumDate": -1
+      "premiumDate": -1,
+      "akinator": {
+        "sesi": false,
+        "server": null,
+        "frontaddr": null,
+        "session": null,
+        "signature": null,
+        "question": null,
+        "progression": null,
+        "step": null,
+        "soal": null
+      }
     },
     "6283153728993@s.whatsapp.net": {
       "healt": 100,
@@ -396,10 +441,10 @@
       "level": 0,
       "pasangan": "",
       "pc": 0,
-      "exp": 174,
+      "exp": 549,
       "coin": 0,
       "atm": 0,
-      "limit": 99,
+      "limit": 96,
       "tigame": 999,
       "lastclaim": 0,
       "money": 0,
@@ -531,8 +576,8 @@
       "name": "+62 831-5372-8993",
       "age": -1,
       "regTime": -1,
-      "premium": true,
-      "premiumTime": 1685282231074,
+      "premium": false,
+      "premiumTime": 0,
       "job": "Pengangguran",
       "lbars": "[▒▒▒▒▒▒▒▒▒]",
       "role": "Warrior V",
@@ -577,7 +622,41 @@
       "bibitapel": 0,
       "bibitmangga": 0,
       "bibitjeruk": 0,
-      "premiumDate": -1
+      "premiumDate": -1,
+      "akinator": {
+        "sesi": false,
+        "server": "https://srv14.akinator.com:9442/ws",
+        "frontaddr": "MTUxLjgwLjM2LjEzOA==",
+        "session": 71,
+        "signature": 2127712840,
+        "question": "Apakah dia Tinggal di Indonesia?",
+        "progression": 0,
+        "step": 0,
+        "soal": {
+          "key": {
+            "remoteJid": "6283153728993@s.whatsapp.net",
+            "fromMe": true,
+            "id": "BAE50E592741249D"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "🎮 *Akinator* 🎮\n\n@6283153728993\nApakah dia Tinggal di Indonesia?\n\nBalas Pesan ini dan ketik salah satu angka di bawah ini\n\n0 - Ya\n1 - Tidak\n2 - Saya Tidak Tau\n3 - Mungkin\n4 - Mungkin Tidak\n\n*.akinator end* untuk keluar dari sesi Akinator",
+              "contextInfo": {
+                "stanzaId": "DB5529FC33A8021A59133566DAF3F7B5",
+                "participant": "6283153728993@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".akinator"
+                },
+                "mentionedJid": [
+                  "6283153728993@s.whatsapp.net"
+                ]
+              }
+            }
+          },
+          "messageTimestamp": "1685176571",
+          "status": "PENDING"
+        }
+      }
     },
     "6285362310661@s.whatsapp.net": {
       "healt": 100,
@@ -1237,14 +1316,27 @@
       "antiLink": false,
       "viewonce": false,
       "antiToxic": true
+    },
+    "120363140308894872@g.us": {
+      "isBanned": false,
+      "welcome": true,
+      "detect": false,
+      "sWelcome": "",
+      "sBye": "",
+      "sPromote": "",
+      "sDemote": "",
+      "delete": true,
+      "antiLink": false,
+      "viewonce": false,
+      "antiToxic": true
     }
   },
   "stats": {
     "main-menu.js": {
-      "total": 19,
-      "success": 19,
-      "last": 1685121963628,
-      "lastSuccess": 1685121963628
+      "total": 44,
+      "success": 43,
+      "last": 1685263909938,
+      "lastSuccess": 1685263909938
     },
     "featurelist.js": {
       "total": 19,
@@ -1271,16 +1363,16 @@
       "lastSuccess": 1685032901633
     },
     "owner-addprem.js": {
-      "total": 4,
-      "success": 3,
-      "last": 1685109431074,
-      "lastSuccess": 1685109431074
+      "total": 20,
+      "success": 12,
+      "last": 1685261016489,
+      "lastSuccess": 1685261004021
     },
     "owner-listprem.js": {
-      "total": 19,
-      "success": 19,
-      "last": 1685109685629,
-      "lastSuccess": 1685109685629
+      "total": 29,
+      "success": 29,
+      "last": 1685261026069,
+      "lastSuccess": 1685261026069
     },
     "_autoreact.js": {
       "total": 2,
@@ -1307,10 +1399,10 @@
       "lastSuccess": 1685115012326
     },
     "cecan.js": {
-      "total": 11,
-      "success": 6,
-      "last": 1685122700800,
-      "lastSuccess": 1685122700800
+      "total": 33,
+      "success": 18,
+      "last": 1685260885154,
+      "lastSuccess": 1685258912440
     },
     "cecan2.js": {
       "total": 3,
@@ -1365,6 +1457,108 @@
       "success": 2,
       "last": 1685122731662,
       "lastSuccess": 1685122731662
+    },
+    "internet-chord.js": {
+      "total": 5,
+      "success": 5,
+      "last": 1685258959109,
+      "lastSuccess": 1685258959109
+    },
+    "internet-cuaca.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1685168920142,
+      "lastSuccess": 1685168920142
+    },
+    "murothal.js": {
+      "total": 6,
+      "success": 3,
+      "last": 1685169507453,
+      "lastSuccess": 1685169507453
+    },
+    "alquran.js": {
+      "total": 23,
+      "success": 13,
+      "last": 1685173863758,
+      "lastSuccess": 1685173863758
+    },
+    "owner-delprem.js": {
+      "total": 9,
+      "success": 9,
+      "last": 1685260879552,
+      "lastSuccess": 1685260879552
+    },
+    "main-delete.js": {
+      "total": 2,
+      "success": 0,
+      "last": 1685176330102,
+      "lastSuccess": 0
+    },
+    "game-akinator.js": {
+      "total": 9,
+      "success": 9,
+      "last": 1685259855198,
+      "lastSuccess": 1685259855198
+    },
+    "creator.js": {
+      "total": 6,
+      "success": 1,
+      "last": 1685258516983,
+      "lastSuccess": 1685258516983
+    },
+    "info-creator.js": {
+      "total": 3,
+      "success": 3,
+      "last": 1685258850002,
+      "lastSuccess": 1685258850002
+    },
+    "featurequotes.js": {
+      "total": 7,
+      "success": 2,
+      "last": 1685263848649,
+      "lastSuccess": 1685261858340
+    },
+    "internet-ceritahoror.js": {
+      "total": 6,
+      "success": 3,
+      "last": 1685265170037,
+      "lastSuccess": 1685265170037
+    },
+    "internet-cerpen.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1685265545489,
+      "lastSuccess": 1685265545489
+    },
+    "jarak.js": {
+      "total": 4,
+      "success": 2,
+      "last": 1685266359364,
+      "lastSuccess": 1685266359364
+    },
+    "jarak2.js": {
+      "total": 5,
+      "success": 5,
+      "last": 1685266379617,
+      "lastSuccess": 1685266379617
+    },
+    "stalker-igstalk2.js": {
+      "total": 4,
+      "success": 3,
+      "last": 1685267378942,
+      "lastSuccess": 1685266785557
+    },
+    "downloader-ttstalk.js": {
+      "total": 6,
+      "success": 6,
+      "last": 1685267743032,
+      "lastSuccess": 1685267743032
+    },
+    "ktpmaker.js": {
+      "total": 9,
+      "success": 4,
+      "last": 1685270189554,
+      "lastSuccess": 1685270189554
     }
   },
   "msgs": {},

@@ -11,8 +11,8 @@ handler.before = async function (m) {
 	if (step == '0' && m.text == '5') return m.reply('Anda telah mencapai pertanyaan pertama')
 	let res, anu, soal
 	try {
-		if (m.text == '5') res = await fetch(`https://api.lolhuman.xyz/api/akinator/back?apikey=95cfe4f34983e05a49c3496f&server=${server}&session=${session}&signature=${signature}&step=${step}`)
-		else res = await fetch(`https://api.lolhuman.xyz/api/akinator/answer?apikey=95cfe4f34983e05a49c3496f&server=${server}&frontaddr=${frontaddr}&session=${session}&signature=${signature}&step=${step}&answer=${m.text}`)
+		if (m.text == '5') res = await fetch(`https://api.lolhuman.xyz/api/akinator/back?apikey=${lolkey}&server=${server}&session=${session}&signature=${signature}&step=${step}`)
+		else res = await fetch(`https://api.lolhuman.xyz/api/akinator/answer?apikey=${lolkey}&server=${server}&frontaddr=${frontaddr}&session=${session}&signature=${signature}&step=${step}&answer=${m.text}`)
 		anu = await res.json()
 		if (anu.status != '200') {
 			aki.sesi = false

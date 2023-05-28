@@ -16,6 +16,9 @@ conn,
 	else m.reply(data.desc)
 }
 handler.command = ['jarak']
+handler.tags = ['internet']
+handler.register = true
+handler.limit = true
 
 module.exports = handler
 async function jarak(dari, ke) {
