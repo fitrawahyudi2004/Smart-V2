@@ -7,10 +7,12 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 let levelling = require('../lib/levelling')
 
+
 let tags = {
   'simple': 'SIMPLE FEATURE',
   'main': 'FEATURE UTAMA',
   'ai': 'FEATURE AI', 
+  'story': 'FEATURE STORY',
   'admin': 'ADMIN FEATURE',
   'owner': 'FEATURE OWNER',
   'downloader': 'FEATURE DOWNLOADER',
@@ -79,15 +81,15 @@ Halo kak, @${m.sender.split`@`[0]} Selamat %ucpn
 %m2 ⬡ Prefix Used : *[ %p ]*
 %m2 ⬡ Database : %rtotalreg dari %totalreg 
 %m2 ⬡ Memory Used : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-%m2 ⬡ Battery: ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'Tidak Di ketahui'}
 %m2 ⬡ OS Platform : ${os.platform()}
+%m2 ⬡ Battery: ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
 %m3
 
 %m1 *O W N E R  I N F O*
 %m2 ⬡ Nama : ${owners}
 %m2 ⬡ Nomor : wa.me/%noOwn
 %m2 ⬡ Tanggal Lahir : %lahir
-%m2 ⬡ Ulang Tahun : ${ohari} Hari, ${ojam} Jam, ${onet} Menit, ${detek} Detik
+%m2 ⬡ Instagram : ${sig}
 %m3
 
 %m1 *D E T A I L  P E N G G U N A*
@@ -114,6 +116,7 @@ Halo kak, @${m.sender.split`@`[0]} Selamat %ucpn
 %m3
 
 %m1 *I N F O  L A I N N Y A*
+%m2 ⬡ Ulang Tahun Owner: ${ohari} Hari, ${ojam} Jam, ${onet} Menit, ${detek} Detik
 %m2 ⬡ Ramadhan 2024 : ${ooohari} Hari, ${ooojam} Jam, ${ooonet} Menit, ${oodetek} Detik
 %m2 ⬡ Idul Fitri 2024 : ${oohari} Hari, ${oojam} Jam, ${oonet} Menit, ${odetek} Detik
 %m3
@@ -264,6 +267,7 @@ Halo kak, @${m.sender.split`@`[0]} Selamat %ucpn
       level, limit, versi, lahir, prems, ucpn, dash, wm3, noOwn, m1, m2, m3, m4, cc, c1, c2, c3, c4, lprem, llim, names, name, weton, week, date, dateIslamic, wib, wit, wita, prems, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
+    await conn.sendFile(m.chat, 'https://s5.ttsmaker.com/file/2023-05-30-002445_130879.mp3', m )
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 conn.sendMessage(m.chat, {
 text: text,

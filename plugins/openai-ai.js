@@ -6,9 +6,17 @@ let handler = async (m, {
  }) => {
 if (!text) throw `Masukkan pertanyaan!\n\n*Contoh:* Siapa presiden Indonesia? `
 await m.reply(wait)
-  let apii = await fetch(`https://api.botcahx.live/api/search/openai-chat?text=${text}&apikey=${btc}`)
+  let apii = await fetch(`https://api.lolhuman.xyz/api/openai-turbo?apikey=${lolkey}&text=${text}&system=`)
   let js = await apii.json()
-  await m.reply(js.message)
+
+ m.reply(`
+ 
+ Pertanyaan Anda : ${text}
+ 
+ Jawaban AI : 
+ ${js.result}
+ 
+ `)
 }      
 handler.command = handler.help = ['ai','openai','chatgpt'];
 handler.tags = ['ai'];

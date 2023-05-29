@@ -20,16 +20,17 @@ global.dana = '6281262166032'
 global.pulsa = '6281262166032'
 global.gopay = '6281262166032'
 global.namebot = 'Smart Bot V12'
+global.sig = 'https://instagram.com/fitra_wahyudi_'
 global.gc = 'https://chat.whatsapp.com/Hvkzf6lLjLRHjtd67G1gfL'
 global.web = 'https://github.com/fitrawahyudi2004'
 global.instagram = 'https://instagram.com/fitra_wahyudi_'
 global.wm = '© FWD'
-global.versi = '7.1.1'
+global.versi = '12.1.1'
 global.watermark = wm
 global.wm2 = '⫹⫺ FWD'
 global.wm3 = '© FWD'
 global.wm4 = '© BotWa'
-global.wait = '_*Tunggu sedang di proses...*_'
+global.wait = '_*Tunggu sebentar sedang di proses...*_'
 global.eror = '_*Server Error*_'
 global.benar = 'Benar ✅\n'
 global.salah = 'Salah ❌\n'
@@ -65,6 +66,8 @@ global.lolm = 'Ⓛ' //LOGO FREE ON MENU.JS
 global.htjava = '⫹⫺'    //hiasan Doang :v
 global.hsquere = ['⛶','❏','⫹⫺']
 
+// Api Key
+global.weatherApi = 'ef2d2c6864f04dd196d201850232805'
 global.lolkey = 'fitra_wahyudi_'
 global.btc = 'fitra_wahyudi_' //Daftar terlebih dahulu https://api.botcahx.live
 global.lann = 'trial' //Note Key Ini Hanya Bertahan Selama 4 Day Sejak Config.js update! lebih baik register di https://api.lannn.me
@@ -74,6 +77,7 @@ global.APIs = {
   lol: 'https://api.lolhuman.xyz'
 }
 global.APIKeys = { 
+  'http://api.weatherapi.com':'ef2d2c6864f04dd196d201850232805',
   'https://api.botcahx.live': 'fitra_wahyudi_',
   'https://api.lolhuman.xyz': 'fitra_wahyudi_' //isi apikey mu https://api.botcahx.live
 }

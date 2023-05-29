@@ -10,7 +10,7 @@
       "level": 0,
       "pasangan": "",
       "pc": 0,
-      "exp": 7807,
+      "exp": 9340,
       "coin": 0,
       "atm": 0,
       "limit": 100,
@@ -668,7 +668,7 @@
       "level": 0,
       "pasangan": "",
       "pc": 0,
-      "exp": 50,
+      "exp": 77,
       "coin": 0,
       "atm": 0,
       "limit": 100,
@@ -849,7 +849,18 @@
       "bibitapel": 0,
       "bibitmangga": 0,
       "bibitjeruk": 0,
-      "premiumDate": -1
+      "premiumDate": -1,
+      "akinator": {
+        "sesi": false,
+        "server": null,
+        "frontaddr": null,
+        "session": null,
+        "signature": null,
+        "question": null,
+        "progression": null,
+        "step": null,
+        "soal": null
+      }
     },
     "62895333324501@s.whatsapp.net": {
       "healt": 100,
@@ -2159,10 +2170,10 @@
   },
   "stats": {
     "main-menu.js": {
-      "total": 49,
-      "success": 48,
-      "last": 1685297930099,
-      "lastSuccess": 1685297930099
+      "total": 55,
+      "success": 54,
+      "last": 1685378553526,
+      "lastSuccess": 1685378553526
     },
     "featurelist.js": {
       "total": 19,
@@ -2189,10 +2200,10 @@
       "lastSuccess": 1685032901633
     },
     "owner-addprem.js": {
-      "total": 20,
-      "success": 12,
-      "last": 1685261016489,
-      "lastSuccess": 1685261004021
+      "total": 21,
+      "success": 13,
+      "last": 1685375436138,
+      "lastSuccess": 1685375436138
     },
     "owner-listprem.js": {
       "total": 29,
@@ -2303,10 +2314,10 @@
       "lastSuccess": 1685169507453
     },
     "alquran.js": {
-      "total": 83,
-      "success": 36,
-      "last": 1685301556796,
-      "lastSuccess": 1685301556796
+      "total": 86,
+      "success": 39,
+      "last": 1685366399326,
+      "lastSuccess": 1685366399326
     },
     "owner-delprem.js": {
       "total": 9,
@@ -2381,9 +2392,9 @@
       "lastSuccess": 1685267743032
     },
     "ktpmaker.js": {
-      "total": 9,
+      "total": 10,
       "success": 4,
-      "last": 1685270189554,
+      "last": 1685379020644,
       "lastSuccess": 1685270189554
     },
     "asmaulhusna.js": {
@@ -2411,10 +2422,10 @@
       "lastSuccess": 1685282727440
     },
     "kisahrasul.js": {
-      "total": 4,
-      "success": 0,
-      "last": 1685283180909,
-      "lastSuccess": 0
+      "total": 14,
+      "success": 7,
+      "last": 1685374583652,
+      "lastSuccess": 1685374583652
     },
     "pantun.js": {
       "total": 3,
@@ -2471,16 +2482,76 @@
       "lastSuccess": 1685302832939
     },
     "hadits.js": {
-      "total": 4,
-      "success": 2,
-      "last": 1685303899315,
-      "lastSuccess": 1685303899315
+      "total": 5,
+      "success": 3,
+      "last": 1685365411821,
+      "lastSuccess": 1685365411821
     },
     "cuaca.js": {
+      "total": 14,
+      "success": 13,
+      "last": 1685364637120,
+      "lastSuccess": 1685364637120
+    },
+    "bot.js": {
+      "total": 10,
+      "success": 9,
+      "last": 1685378531137,
+      "lastSuccess": 1685378531137
+    },
+    "alquran2.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1685367129648,
+      "lastSuccess": 1685367129648
+    },
+    "openai-ai.js": {
       "total": 13,
-      "success": 12,
-      "last": 1685306747783,
-      "lastSuccess": 1685306747783
+      "success": 13,
+      "last": 1685377790354,
+      "lastSuccess": 1685377790354
+    },
+    "openai-aiimg.js": {
+      "total": 4,
+      "success": 4,
+      "last": 1685377813236,
+      "lastSuccess": 1685377813236
+    },
+    "assalamualaikum.js": {
+      "total": 4,
+      "success": 2,
+      "last": 1685379109603,
+      "lastSuccess": 1685379109603
+    },
+    "sticker-tourl.js": {
+      "total": 3,
+      "success": 1,
+      "last": 1685368566724,
+      "lastSuccess": 1685368566724
+    },
+    "jadwalshalat.js": {
+      "total": 7,
+      "success": 1,
+      "last": 1685369783789,
+      "lastSuccess": 1685369783789
+    },
+    "cerpen-remaja.js": {
+      "total": 8,
+      "success": 2,
+      "last": 1685372581098,
+      "lastSuccess": 1685372481781
+    },
+    "cerpen-opsi.js": {
+      "total": 6,
+      "success": 3,
+      "last": 1685374612233,
+      "lastSuccess": 1685374612233
+    },
+    "broadcast.js": {
+      "total": 4,
+      "success": 2,
+      "last": 1685376878288,
+      "lastSuccess": 1685375194515
     }
   },
   "msgs": {},

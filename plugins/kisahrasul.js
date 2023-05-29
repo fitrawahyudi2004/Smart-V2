@@ -1,22 +1,53 @@
 const { result } = require('lodash')
 let fetch = require ('node-fetch')
 let handler = async (m, { conn, command, text, args, usedPrefix }) => {
-let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : ''    
+    if (!text) throw `
+    Contoh :
+    
+    ${usedPrefix}${command} muhammad
+    (huruf kecil semua)
+    
+    Opsi Tersedia:
+    
+    • Adam
+    • Idris
+    • Nuh
+    • Hud
+    • Shaleh
+    • Ibrahim
+    • Luth
+    • Ismail
+    • Ishak
+    • Yaqub
+    • Yusuf
+    • Ayub
+    • Shuaib
+    • Harun
+    • Musa
+    • Daud
+    • Zulkifli
+    • Sulaiman
+    • Ilyas
+    • Ilyasa
+    • Yunus
+    • Zakaria
+    • Yahya
+    • Isa
+    • Muhammad
+    `.trim()
 
- if (!teks) throw `
- Contoh:\n${usedPrefix}${command} isa`
-
-let buffer = await fetch(`https://api.lolhuman.xyz/api/kisahnabi/${args[0]}?apikey=${lolkey}`)
-let json = buffer.json()
-m.reply= (
-`
+let buffer = await fetch(`https://api.lolhuman.xyz/api/kisahnabi/${text}?apikey=${lolkey}`)
+// await m.reply(wait)
+let json = await buffer.json()
+ m.reply = (`
 ─────〔 *Kisah Nabi* 〕─────
 
 *Nama :* ${json.result.name}
-*Tahun Kelahiran :* ${json.result.tahun_kelahiran}
+*Tahun Kelahiran :* ${json.result.thn_kelahiran}
 *Usia* ${json.result.age}
 *Tempat :* ${json.result.place}
-*Kisah :* ${json.result.story}
+
+${json.result.story}
 `)
 // conn.sendFile(m.chat, buffer, 'hasil.jpg', "Nih kk KTP nya ", m)
 }

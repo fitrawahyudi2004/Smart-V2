@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 let handler = async (m, { conn, command, text, args,usedPrefix }) => {
 
 
-let res = await fetch(`http://api.weatherapi.com/v1/current.json?key=ef2d2c6864f04dd196d201850232805&q=${text}&aqi=no`)
+let res = await fetch(`http://api.weatherapi.com/v1/current.json?key=${weatherApi}&q=${text}&aqi=no`)
 let json = await res.json()
 
 await m.reply(wait)

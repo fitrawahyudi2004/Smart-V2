@@ -23,7 +23,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 
 
 // `
-let buffer = await fetch(`https://api.lolhuman.xyz/api/ceritahoror?apikey=fitra_wahyudi_`)
+let buffer = await fetch(`https://api.lolhuman.xyz/api/ceritahoror?apikey=${lolkey}`)
 let json = await buffer.json()
 let thumb = json.result.thumbnail
 let anu = (`
@@ -39,7 +39,7 @@ conn.sendFile(m.chat, thumb, 'hasil.jpg', anu, m)
 }
 handler.help = ['ceritahoror']
 handler.command = ['ceritahoror']
-handler.tags = ['internet']
+handler.tags = ['story']
 handler.register = true
 handler.limit = true
 handler.premium = false

@@ -16,7 +16,7 @@ m.reply(anu)
 }
 handler.help = ['cerpen']
 handler.command = ['cerpen']
-handler.tags = ['internet']
+handler.tags = ['story']
 handler.register = true
 handler.limit = true
 handler.premium = false
