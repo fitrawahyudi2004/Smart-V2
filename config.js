@@ -67,16 +67,19 @@ global.htjava = '⫹⫺'    //hiasan Doang :v
 global.hsquere = ['⛶','❏','⫹⫺']
 
 // Api Key
+global.zenz = 'zenzkey_5ecc47890c'
 global.weatherApi = 'ef2d2c6864f04dd196d201850232805'
 global.lolkey = 'fitra_wahyudi_'
 global.btc = 'fitra_wahyudi_' //Daftar terlebih dahulu https://api.botcahx.live
 global.lann = 'trial' //Note Key Ini Hanya Bertahan Selama 4 Day Sejak Config.js update! lebih baik register di https://api.lannn.me
 global.APIs = { 
+  zen: 'https://api.zahwazein.xyz',
   tio: 'https://api.botcahx.live',
   alpis: 'https://alpis.eu.org',
   lol: 'https://api.lolhuman.xyz'
 }
 global.APIKeys = { 
+  'https://api.zahwazein.xyz': 'zenzkey_5ecc47890c',
   'http://api.weatherapi.com':'ef2d2c6864f04dd196d201850232805',
   'https://api.botcahx.live': 'fitra_wahyudi_',
   'https://api.lolhuman.xyz': 'fitra_wahyudi_' //isi apikey mu https://api.botcahx.live

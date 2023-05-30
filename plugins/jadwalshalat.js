@@ -20,6 +20,8 @@ let anu = (`
 *Ashar :* ${json.result.ashar}
 *Maghrib :* ${json.result.maghrib}
 *Isya :* ${json.result.isya}
+
+${wm}
 `)
 m.reply(anu)
 // conn.sendFile(m.chat, buffer, 'hasil.jpg', "Nih kk KTP nya ", m)

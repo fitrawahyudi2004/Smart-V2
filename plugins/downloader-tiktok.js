@@ -27,7 +27,7 @@ conn.sendFile(m.chat, audio, 'tikmp3.opus', null, m)
 handler.help = ['tiktok <link>']
 handler.command = /^(tiktok|tt|tiktokdl|tiktoknowm|dltt)$/i
 handler.tags = ['downloader'];
-handler.limit = true;
+handler.limit = 20;
 handler.group = false;
 handler.premium = false;
 handler.owner = false;

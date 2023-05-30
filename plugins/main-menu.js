@@ -9,7 +9,6 @@ let levelling = require('../lib/levelling')
 
 
 let tags = {
-  'simple': 'SIMPLE FEATURE',
   'main': 'FEATURE UTAMA',
   'ai': 'FEATURE AI', 
   'story': 'FEATURE STORY',
@@ -267,7 +266,7 @@ Halo kak, @${m.sender.split`@`[0]} Selamat %ucpn
       level, limit, versi, lahir, prems, ucpn, dash, wm3, noOwn, m1, m2, m3, m4, cc, c1, c2, c3, c4, lprem, llim, names, name, weton, week, date, dateIslamic, wib, wit, wita, prems, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
-    await conn.sendFile(m.chat, 'https://s5.ttsmaker.com/file/2023-05-30-002445_130879.mp3', m )
+    //await conn.sendFile(m.chat, 'https://s5.ttsmaker.com/file/2023-05-30-002445_130879.mp3', m )
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 conn.sendMessage(m.chat, {
 text: text,
@@ -276,7 +275,7 @@ externalAdReply: {
 title: date,
 body: 'bodynya',
 thumbnailUrl: "https://i.postimg.cc/Zqx80YRQ/1.webp",
-sourceUrl: "https://chat.whatsapp.com/Hvkzf6lLjLRHjtd67G1gfL",
+sourceUrl: "https://chat.whatsapp.com/DMeVfGz9QkLCDVHlmCLdai",
 mediaType: 1,
 renderLargerThumbnail: true
 }}}, { quoted: m})
@@ -321,7 +320,7 @@ handler.help = ['menu']
 handler.tags = ['main']
 handler.command = /^(all|open)(feature)$/i
 
-handler.exp = 3
+handler.exp = 300
 handler.register = true
 
 module.exports = handler
